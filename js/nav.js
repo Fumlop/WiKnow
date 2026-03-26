@@ -26,13 +26,14 @@
         { href: '/bgs/conflicts.html', label: 'Wars & Elections' },
         { href: '/bgs/expansion-retreat.html', label: 'Expansion & Retreat' },
         { href: '/bgs/states.html', label: 'States Reference' },
-        { href: '/bgs/actions.html', label: 'Actions Reference' },
-        { href: '/bgs/history-flc-vs-thki.html', label: 'FLC vs THKI' }
+        { href: '/bgs/actions.html', label: 'Actions Reference' }
       ]
     },
     {
       title: 'Technical Help',
-      items: []
+      items: [
+        { href: '/tech/pp-cache-fix.html', label: 'PP Cache Fix' }
+      ]
     }
   ];
 

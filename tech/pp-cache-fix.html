@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PP Cache Fix — Technical Help | EDIntel Wiki</title>
+<link rel="stylesheet" href="../css/wiki.css">
+</head>
+<body>
+<div class="wiki-layout">
+
+<nav class="wiki-sidebar" id="wiki-nav"></nav>
+
+<main class="wiki-content">
+
+<nav class="breadcrumb">
+  <a href="../index.html">Wiki</a> <span class="sep">/</span>
+  <span>PP Cache Fix</span>
+</nav>
+
+<h1>PP Cache Fix</h1>
+<p class="subtitle">How to fix a broken PowerPlay data cache in Elite: Dangerous.</p>
+
+<div class="callout callout-warn">
+  <strong>Before starting:</strong> Close Elite: Dangerous and the Elite launcher completely.
+</div>
+
+<h2>The Fix</h2>
+
+<p>Rename (or delete) the file:</p>
+<p><code>C:\Users\&lt;username&gt;\AppData\Local\Frontier Developments\Elite Dangerous\GalacticPoliticsPowers2Digest.cache</code></p>
+<p>(where <code>&lt;username&gt;</code> is your Windows username)</p>
+
+<h2>Step by Step</h2>
+
+<p>The <code>AppData</code> folder is normally hidden, so the easiest way to get there:</p>
+
+<ol>
+  <li>Press <strong>Win+R</strong> at the Windows desktop to open the Run window</li>
+  <li>Copy and paste <code>%LOCALAPPDATA%\Frontier Developments\Elite Dangerous</code> into the Open text box</li>
+  <li>Click <strong>OK</strong></li>
+  <li>Find the <code>GalacticPoliticsPowers2Digest.cache</code> file</li>
+  <li>Rename or delete it</li>
+  <li>Launch Elite and test</li>
+</ol>
+
+<div class="callout callout-warn">
+  <strong>Choose carefully:</strong> There are two files with similar names in that folder. Make sure you pick <code>GalacticPoliticsPowers<strong>2</strong>Digest.cache</code> (with the <strong>2</strong>).
+</div>
+
+</main>
+
+</div>
+<script src="/js/nav.js"></script>
+</body>
+</html>
