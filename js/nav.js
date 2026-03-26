@@ -37,6 +37,12 @@
       items: [
         { href: '/tech/pp-cache-fix.html', label: 'PowerPlay Cache' }
       ]
+    },
+    {
+      title: 'Reference',
+      items: [
+        { href: '/ref/sources.html', label: 'Sources & Links' }
+      ]
     }
   ];
 
@@ -52,7 +58,7 @@
   var brand = document.createElement('a');
   brand.href = '/index.html';
   brand.className = 'sidebar-brand';
-  brand.textContent = 'EDIntel Wiki';
+  brand.textContent = 'Winters Frosty Wiki';
   nav.appendChild(brand);
 
   // Build sections
