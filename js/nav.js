@@ -15,7 +15,10 @@
     {
       title: 'PowerPlay',
       items: [
-        { href: '/pcz-guide.html', label: 'PCZ Guide' }
+        { href: '/pcz-guide.html', label: 'PCZ Guide' },
+        { href: '/pp/reinforcement.html', label: 'Reinforcement' },
+        { href: '/pp/acquisition.html', label: 'Acquisition' },
+        { href: '/pp/undermining.html', label: 'Undermining' }
       ]
     },
     {

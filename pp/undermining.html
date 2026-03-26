@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Undermining — PowerPlay Guide | EDIntel Wiki</title>
+<link rel="stylesheet" href="../css/wiki.css">
+</head>
+<body>
+<div class="wiki-layout">
+
+<script>window.wikiSubNav = [
+  { hash: '#overview', label: 'Overview' },
+  { hash: '#activities', label: 'Activities by Strength' },
+  { hash: '#ship-kills', label: 'Ship Kill Table' },
+  { hash: '#details', label: 'Activity Details' },
+  { hash: '#carrier-assault', label: 'Carrier Assault' },
+  { hash: '#vulnerabilities', label: 'Power Vulnerabilities' }
+];</script>
+<nav class="wiki-sidebar" id="wiki-nav"></nav>
+
+<main class="wiki-content">
+
+<nav class="breadcrumb">
+  <a href="../index.html">Wiki</a> <span class="sep">/</span>
+  <span>Undermining</span>
+</nav>
+
+<h1>Undermining</h1>
+<p class="subtitle">How to weaken enemy Powers' control over their systems.</p>
+
+<h2 id="overview">Overview</h2>
+
+<div class="callout callout-info">
+  <strong>What is undermining?</strong> Performing activities in enemy-controlled systems to reduce their control score. Enough undermining can downgrade a system from Stronghold &rarr; Fortified &rarr; Exploited, or even cause it to revolt.
+</div>
+
+<ul>
+  <li>Merit values <strong>scale with system strength</strong>: Standard &gt; Moderate &gt; High &gt; Very High</li>
+  <li>Higher system strength = fewer merits per action (harder to undermine)</li>
+  <li><strong>+5% merit bonus</strong> on all undermining activities (since April 2025)</li>
+  <li>Some activities are <strong>blocked in stronghold systems with a carrier present</strong></li>
+  <li>Control score decay is nonlinear &mdash; higher scores decay faster, but no system loses its level from decay alone. Undermining is always required to downgrade.</li>
+</ul>
+
+<h2 id="activities">Activities Scaled by System Strength</h2>
+
+<p>Top activities that scale with system strength. Empty cells are untested.</p>
+
+<table>
+<colgroup><col style="width:32%"><col style="width:17%"><col style="width:17%"><col style="width:17%"><col style="width:17%"></colgroup>
+<thead><tr><th>Activity</th><th>Standard</th><th>Moderate</th><th>High</th><th>V. High</th></tr></thead>
+<tbody>
+  <tr><td><strong>Settlement data (Assoc/Polit/Class)</strong></td><td>486</td><td>378</td><td>268</td><td>?</td></tr>
+  <tr><td><strong>Settlement data (Indust/Research)</strong></td><td>324</td><td>252</td><td>180</td><td>?</td></tr>
+  <tr><td><strong>Tracker upload</strong></td><td>224</td><td>172</td><td>124</td><td>?</td></tr>
+  <tr><td><strong>Power goods stealing</strong></td><td>124</td><td>96</td><td>68</td><td>?</td></tr>
+  <tr><td><strong>Donations (1M Cr)</strong></td><td colspan="4">36-48 merits (does not work with stronghold carrier)</td></tr>
+  <tr><td><strong>Holoscreen hacking</strong></td><td colspan="4">40-100 merits</td></tr>
+  <tr><td><strong>Settlement NPC kills</strong></td><td colspan="4">22-36 merits (does not work in strongholds)</td></tr>
+  <tr><td><strong>Mining (sell in system)</strong></td><td>~1 per 1,470 Cr</td><td>~1 per 2,200 Cr</td><td>~1 per 2,650 Cr</td><td>?</td></tr>
+</tbody>
+</table>
+
+<h3>Fixed-Value Activities</h3>
+<table>
+<colgroup><col style="width:40%"><col style="width:15%"><col style="width:45%"></colgroup>
+<thead><tr><th>Activity</th><th>Merits</th><th>Notes</th></tr></thead>
+<tbody>
+  <tr><td><strong>Megaship datalink scan</strong></td><td>~240</td><td>Once per cycle per system</td></tr>
+  <tr><td><strong>Sell low-value commodities (&lt;500 Cr)</strong></td><td>Varies</td><td>Water, biowaste, scrap, algae. Mind station economy. No stronghold carrier</td></tr>
+  <tr><td><strong>Liberal Propaganda</strong></td><td>0.7-1.2 per pkg</td><td>15-250 per 30min. Does not work for UM strongholds</td></tr>
+</tbody>
+</table>
+
+<h2 id="ship-kills">Kill Power Ships &mdash; Merit Table</h2>
+
+<p>Merits depend on target rank and system strength. Values in parentheses are calculated estimates.</p>
+
+<table>
+<colgroup><col style="width:28%"><col style="width:18%"><col style="width:18%"><col style="width:18%"><col style="width:18%"></colgroup>
+<thead><tr><th>Rank</th><th>Standard</th><th>Moderate</th><th>High</th><th>V. High</th></tr></thead>
+<tbody>
+  <tr><td>Harmless</td><td>(12)</td><td>(12)</td><td>(11)</td><td>(9)</td></tr>
+  <tr><td>Mostly Harmless</td><td>(23)</td><td>20</td><td>(18)</td><td>(14)</td></tr>
+  <tr><td>Novice</td><td>(32)</td><td>27</td><td>(25)</td><td>(20)</td></tr>
+  <tr><td>Competent</td><td>40</td><td>35</td><td>100</td><td>25</td></tr>
+  <tr><td>Expert</td><td>(48)</td><td>42</td><td>124</td><td>31</td></tr>
+  <tr><td>Master</td><td>57</td><td>50</td><td>144</td><td>36</td></tr>
+  <tr><td>Dangerous</td><td>66</td><td>57</td><td>50</td><td>41</td></tr>
+  <tr><td>Deadly</td><td>75</td><td>(65)</td><td>56</td><td>(47)</td></tr>
+  <tr><td>Elite</td><td>(84)</td><td>73</td><td>(61)</td><td>(52)</td></tr>
+</tbody>
+</table>
+<p style="font-size:0.85em; color:var(--text-dim);">Values in parentheses are calculated and need confirmation. Best to kill ships belonging to the undermined Power &mdash; all others give only 20 merits per kill. Can drop from supercruise at random locations to find Power ships.</p>
+
+<h2 id="details">Activity Details</h2>
+
+<h3>Settlement Data &amp; Goods Stealing</h3>
+<p>E-breach or 4-digit code required. Find dataport locations using terminals. Data and goods must be delivered to a Power Contact in any Winters system. Downloading is illegal &mdash; turn off alarms first. Every commander in a team can copy data from the same dataport. Power goods can only be taken by one commander.</p>
+
+<h3>Tracker Upload (224/172/124 merits)</h3>
+<p>Upload to any dataport in a settlement (one per dataport, multiple per settlement). Collect 10 trackers from a stronghold's Power Contact every 30 minutes. Tracker is illegal &mdash; do not get scanned. Uploading is criminal &mdash; turn off alarms first. Every commander in a team can upload to the same dataport. Does not work in strongholds.</p>
+
+<h3>Low-Value Commodity Selling</h3>
+<p>Commodities must be worth less than 500 Cr. Merits depend on base value per ton and quantity. Profit/loss does not matter. Best options: water, biowaste, scrap, algae. Watch station economy &mdash; water can be 4 Cr in Agriculture but over 500 in others. Does not work with stronghold carrier present.</p>
+
+<h3>Settlement NPC Kills (22-36 merits)</h3>
+<p>Kill NPCs dressed in the enemy Power's colour suits at settlements. Check staff list on terminals to identify them. Does not work in strongholds.</p>
+
+<h2 id="carrier-assault">Stronghold Carrier Assault</h2>
+
+<div class="callout callout-warn">
+  <strong>Dangerous team activity.</strong> Strongholds with carriers are the hardest to undermine because many activities are blocked. Direct assault on the carrier group is an option for experienced players.
+</div>
+
+<h3>Carrier Layout</h3>
+<ul>
+  <li>1 main carrier (where CMDRs land) + 6 supporting vessels</li>
+  <li>Main carrier has high-powered lasers</li>
+  <li>Support vessels vary, most have turrets</li>
+  <li>Ship with green arrow down = main carrier</li>
+  <li>Focus on surrounding support vessels</li>
+</ul>
+
+<h3>Assault Activities (by stealth risk, lowest to highest)</h3>
+
+<ol>
+  <li><strong>Data link scan</strong> (within 200m) &mdash; data transmitters visible from distance. Sequential numbering = same carrier. One time per instance.</li>
+  <li><strong>Hatch breaker limpets on cargo holds</strong> &mdash; repeatable. Draws some attention with delayed response. Some support vessels have 4 cargo bays in a straight line for fast execution.</li>
+  <li><strong>Recon limpets on fighter bays</strong> &mdash; repeatable. Usually four bays on the carrier. Cargo holds located beneath them.</li>
+  <li><strong>Shoot power capacitors</strong> &mdash; one time per instance. Use explosive weapons (Advanced Missile Racks with extra ammo capacity recommended).</li>
+  <li><strong>Disable turrets</strong> &mdash; repeatable. Use explosive weapons.</li>
+</ol>
+
+<p>Each objective = 30 CP: defenses, capacitors, SLFs, cargo holds, fighter bays.</p>
+
+<div class="callout callout-tip">
+  <strong>Stealth approach:</strong> Use a cold-running small ship (Cobra Mk V works well). Silent running + 4 heat sink launchers. If the ship hasn't shot at you, turrets won't fire. As soon as you're scanned and spotted, everything opens up. <strong>"Cycle Next Subsystem" hotkey is your best friend</strong> for sub-targeting carrier components.
+</div>
+
+<h2 id="vulnerabilities">Power Vulnerabilities</h2>
+
+<p>Certain Powers are more susceptible to specific undermining activities:</p>
+
+<table>
+<colgroup><col style="width:30%"><col style="width:70%"></colgroup>
+<thead><tr><th>Power</th><th>Vulnerable to</th></tr></thead>
+<tbody>
+  <tr><td><strong>Aisling Duval</strong></td><td>Holoscreen hacking, stealing data</td></tr>
+  <tr><td><strong>Zemina Torval</strong></td><td>Stealing goods, mining in her systems</td></tr>
+  <tr><td><strong>Arissa Lavigny-Duval</strong></td><td>Megaship datalink scanning</td></tr>
+  <tr><td><strong>Denton Patreus</strong></td><td>Megaship datalink scanning</td></tr>
+  <tr><td><strong>Pranav Antal (Grom)</strong></td><td>Tracker uploads</td></tr>
+  <tr><td><strong>Felicia Winters</strong></td><td>Low-value commodity selling</td></tr>
+</tbody>
+</table>
+
+<hr>
+<p style="font-size:0.8em; color:var(--text-dim);">Merit values from FUC PowerPlay Activities document (astral451) and community testing. Stronghold carrier assault guide by astral451. Some values are estimates pending confirmation.</p>
+
+</main>
+
+</div>
+<script src="/js/nav.js"></script>
+</body>
+</html>

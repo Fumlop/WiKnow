@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reinforcement — PowerPlay Guide | EDIntel Wiki</title>
+<link rel="stylesheet" href="../css/wiki.css">
+</head>
+<body>
+<div class="wiki-layout">
+
+<script>window.wikiSubNav = [
+  { hash: '#overview', label: 'Overview' },
+  { hash: '#activities', label: 'Activities Table' },
+  { hash: '#details', label: 'Activity Details' },
+  { hash: '#ethos', label: 'Ethos & Tips' }
+];</script>
+<nav class="wiki-sidebar" id="wiki-nav"></nav>
+
+<main class="wiki-content">
+
+<nav class="breadcrumb">
+  <a href="../index.html">Wiki</a> <span class="sep">/</span>
+  <span>Reinforcement</span>
+</nav>
+
+<h1>Reinforcement (Fortification)</h1>
+<p class="subtitle">How to defend and strengthen your Power's controlled systems.</p>
+
+<h2 id="overview">Overview</h2>
+
+<div class="callout callout-info">
+  <strong>What is reinforcement?</strong> Earning merits in your Power's controlled systems to increase their control score. Systems progress through three levels: <strong>Exploited</strong> &rarr; <strong>Fortified</strong> &rarr; <strong>Stronghold</strong>.
+</div>
+
+<ul>
+  <li><strong>Control points</strong> = merits &divide; 4 (exploration/exobiology: merits &divide; 6)</li>
+  <li>~333,333 CP per level, 1M CP maximum</li>
+  <li>Only <strong>one level can change per weekly cycle</strong></li>
+  <li>Control scores decay each cycle (nonlinear &mdash; higher score = more decay), but no system loses its level from decay alone</li>
+</ul>
+
+<div class="callout callout-warn">
+  <strong>-35% merit penalty</strong> applies to all reinforcement activities (since April 2025 rebalance). A dynamic modifier (-20% to +30%) also adjusts based on how much the system is being undermined.
+</div>
+
+<h2 id="activities">Activities by Merit Value</h2>
+
+<p>Sorted by merits per action. All values are <strong>before</strong> the -35% penalty.</p>
+
+<table>
+<colgroup><col style="width:35%"><col style="width:15%"><col style="width:50%"></colgroup>
+<thead><tr><th>Activity</th><th>Merits</th><th>Notes</th></tr></thead>
+<tbody>
+  <tr><td><strong>Reboot missions</strong></td><td>1,800</td><td>On-foot. Needs Civil Unrest or Infrastructure Failure state</td></tr>
+  <tr><td><strong>Megaship datalink scan</strong></td><td>900</td><td>Once per cycle per system. Scan ship first, then datalink &lt;200m</td></tr>
+  <tr><td><strong>Salvage: Blackbox</strong></td><td>416</td><td>From power wreckage signal sources. Hand in at Power Contact in same system</td></tr>
+  <tr><td><strong>Settlement power data</strong></td><td>360 each</td><td>3 types: Association, Classified, Political. Download is illegal</td></tr>
+  <tr><td><strong>Kill power ships (Elite)</strong></td><td>388</td><td>Merits scale by rank: Harmless (48) to Elite (388)</td></tr>
+  <tr><td><strong>Salvage: Wreckage Component</strong></td><td>160</td><td>From power wreckage signal sources</td></tr>
+  <tr><td><strong>Donations (1M Cr)</strong></td><td>108</td><td>Also: 30k Cr = 32 merits. 650 Cr commodity value = 1 merit</td></tr>
+  <tr><td><strong>Holoscreen hacking</strong></td><td>84</td><td>Recon limpet on starport holoscreens. Can't hack your own Power's logo</td></tr>
+  <tr><td><strong>Ship/wake scanning</strong></td><td>20 each</td><td>Quick. Can target prescanned Winters power security</td></tr>
+  <tr><td><strong>Sell 40%+ profit commodities</strong></td><td>Varies</td><td>Gallite, Indite good choices. More merits for small chunks (3-5t)</td></tr>
+  <tr><td><strong>Liberal Packages</strong></td><td>6 per pkg</td><td>15-250 per 30min from Power Contact. Hand in at reinforcement system</td></tr>
+  <tr><td><strong>Cartographic data</strong></td><td>4 per 25k Cr</td><td>Sell at Universal Cartographics</td></tr>
+  <tr><td><strong>Rare goods</strong></td><td>4 per 4k Cr</td><td>Saturation &gt;200 ly. Soontill Relics from Ngurii often good</td></tr>
+  <tr><td><strong>Exobiology (first sampled)</strong></td><td>4 per 250k Cr</td><td>First sampled bonus uses different multiplier than base value</td></tr>
+  <tr><td><strong>Mining (same system)</strong></td><td>1 per 880 Cr</td><td>Must mine AND sell in same system. No fleet carrier storage</td></tr>
+  <tr><td><strong>Kill wanted ships</strong></td><td>1 per ~3.8k bounty</td><td>Merits on kill, no need to hand in vouchers</td></tr>
+</tbody>
+</table>
+
+<h2 id="details">Activity Details</h2>
+
+<h3>Reboot Missions (1,800 merits)</h3>
+<p>On-foot settlement reboot missions. Spawn when the target faction is in <strong>Civil Unrest</strong> or <strong>Infrastructure Failure</strong>. Target settlement can be in the same system or a neighboring system.</p>
+<div class="callout callout-warn">
+  <strong>For reinforcement only:</strong> uploading tracker malware and stealing power goods do <em>not</em> work alongside reboot missions for reinforcement purposes.
+</div>
+
+<h3>Megaship Datalink Scan (900 merits)</h3>
+<p>Find megaships as Points of Interest in your navigation filter. Scan the ship first, then the datalink at less than 200m distance. One scan per cycle per system. Megaship location changes each cycle.</p>
+
+<h3>Settlement Power Data (360 merits each)</h3>
+<p>Three types of data can be downloaded: Association, Classified, and Political. Downloading is illegal &mdash; may require illegal identities to access all data. Only some data is sellable in the same system; the rest may be tagged as out of range (known bug).</p>
+
+<h3>Kill Power Ships (48-388 merits)</h3>
+<table>
+<colgroup><col style="width:40%"><col style="width:20%"></colgroup>
+<thead><tr><th>Rank</th><th>Merits</th></tr></thead>
+<tbody>
+  <tr><td>Harmless</td><td>48*</td></tr>
+  <tr><td>Mostly Harmless</td><td>84</td></tr>
+  <tr><td>Novice</td><td>132*</td></tr>
+  <tr><td>Competent</td><td>172</td></tr>
+  <tr><td>Expert</td><td>216</td></tr>
+  <tr><td>Master</td><td>256</td></tr>
+  <tr><td>Dangerous</td><td>300</td></tr>
+  <tr><td>Deadly</td><td>344</td></tr>
+  <tr><td>Elite</td><td>388</td></tr>
+</tbody>
+</table>
+<p style="font-size:0.85em; color:var(--text-dim);">* Values marked with asterisk are calculated estimates, not confirmed.</p>
+
+<h3>Selling Commodities at 40%+ Profit</h3>
+<p>Merit count is based on profit margin. Selling in <strong>small chunks (3-5 tons at a time)</strong> yields more merits than selling all at once. Mid-price minerals like Gallite and Indite are good choices &mdash; low value commodities are easier to hit 40% but earn less income, while high value commodities are difficult to reach 40% profit.</p>
+
+<h3>Liberal Packages</h3>
+<p>Collect from Power Contact at any Winters Stronghold every 30 minutes. Starting allocation is 15, increasing with PP rank up to 250. Hand in at a Power Contact in the reinforcement system (cannot be the same stronghold). No fast-forward available.</p>
+
+<h2 id="ethos">Ethos &amp; Tips</h2>
+
+<p>Winters' reinforcement ethos is <strong>Finance</strong>, giving <strong>+50% merits</strong> on finance-type activities: trade, mining, commodity hauling, exploration.</p>
+
+<div class="callout callout-tip">
+  <strong>Winters Power bonus:</strong> +60% on food and medicine profits, +100% on minor faction reputation gain, +100% on salvage profits in controlled systems.
+</div>
+
+<hr>
+<p style="font-size:0.8em; color:var(--text-dim);">Merit values from FUC PowerPlay Activities document and community testing. Some values are estimates pending confirmation.</p>
+
+</main>
+
+</div>
+<script src="/js/nav.js"></script>
+</body>
+</html>
