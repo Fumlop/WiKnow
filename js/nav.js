@@ -32,7 +32,7 @@
     {
       title: 'Technical Help',
       items: [
-        { href: '/tech/pp-cache-fix.html', label: 'PP Cache Fix' }
+        { href: '/tech/pp-cache-fix.html', label: 'PowerPlay Cache' }
       ]
     }
   ];
