@@ -9,38 +9,13 @@
 <body>
 <div class="wiki-layout">
 
-<nav class="wiki-sidebar">
-  <a href="../index.html" class="sidebar-brand">EDIntel Wiki</a>
-  <div class="sidebar-section">
-    <div class="sidebar-section-title">PowerPlay</div>
-    <ul class="sidebar-nav">
-      <li><a href="../pcz-guide.html">PCZ Guide</a></li>
-    </ul>
-  </div>
-  <div class="sidebar-section">
-    <div class="sidebar-section-title">BGS</div>
-    <ul class="sidebar-nav">
-      <li><a href="influence.html">Influence</a></li>
-      <li><a href="economy-boost.html" class="active">Economy Boost</a>
-        <ul class="sub">
-          <li><a href="#mining-demand">Mining Demand</a></li>
-          <li><a href="#economy-summary">Economy Summary</a></li>
-          <li><a href="#optimal-delivery">Good Delivery</a></li>
-          <li><a href="#load-splits">1282t Load Splits</a></li>
-        </ul>
-      </li>
-      <li><a href="conflicts.html">Wars &amp; Elections</a></li>
-      <li><a href="expansion-retreat.html">Expansion &amp; Retreat</a></li>
-      <li><a href="states.html">States Reference</a></li>
-      <li><a href="actions.html">Actions Reference</a></li>
-    </ul>
-  </div>
-  <div class="sidebar-section">
-    <div class="sidebar-section-title">Technical Help</div>
-    <ul class="sidebar-nav">
-    </ul>
-  </div>
-</nav>
+<script>window.wikiSubNav = [
+  { hash: '#mining-demand', label: 'Mining Demand' },
+  { hash: '#economy-summary', label: 'Economy Summary' },
+  { hash: '#optimal-delivery', label: 'Good Delivery' },
+  { hash: '#load-splits', label: '1282t Load Splits' }
+];</script>
+<nav class="wiki-sidebar" id="wiki-nav"></nav>
 
 <main class="wiki-content">
 
@@ -301,5 +276,6 @@ Trade mechanics also derived from <em>The Complete BGS Guide 2025 v3.0</em> by C
 </main>
 
 </div>
+<script src="/js/nav.js"></script>
 </body>
 </html>
