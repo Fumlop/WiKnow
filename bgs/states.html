@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>States Reference — BGS Guide | EDIntel Wiki</title>
+<link rel="stylesheet" href="../css/wiki.css">
+</head>
+<body>
+<div class="wiki-layout">
+
+<nav class="wiki-sidebar">
+  <a href="../index.html" class="sidebar-brand">EDIntel Wiki</a>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">PowerPlay</div>
+    <ul class="sidebar-nav">
+      <li><a href="../pcz-guide.html">PCZ Guide</a></li>
+    </ul>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">BGS</div>
+    <ul class="sidebar-nav">
+      <li><a href="influence.html">Influence</a></li>
+      <li><a href="economy-boost.html">Economy Boost</a></li>
+      <li><a href="conflicts.html">Wars &amp; Elections</a></li>
+      <li><a href="expansion-retreat.html">Expansion &amp; Retreat</a></li>
+      <li><a href="states.html" class="active">States Reference</a></li>
+      <li><a href="actions.html">Actions Reference</a></li>
+    </ul>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Technical Help</div>
+    <ul class="sidebar-nav">
+    </ul>
+  </div>
+</nav>
+
+<main class="wiki-content">
+
+<nav class="breadcrumb">
+  <a href="../index.html">Wiki</a> <span class="sep">/</span>
+  <a href="index.html">BGS</a> <span class="sep">/</span>
+  <span>States Reference</span>
+</nav>
+
+<h1>States Reference</h1>
+<p class="subtitle">All BGS states — what they do, how to enter and exit them, and how long they last.</p>
+
+<!-- Duration Summary -->
+<h2 id="duration-table">Duration Summary</h2>
+
+<h3>Slider States</h3>
+<table>
+<colgroup><col style="width:30%"><col style="width:15%"><col style="width:15%"><col style="width:15%"><col style="width:25%"></colgroup>
+<thead><tr><th>State</th><th>Pending</th><th>Duration</th><th>Cooldown</th><th>Slider</th></tr></thead>
+<tbody>
+  <tr><td>Boom</td><td>1</td><td>1-&infin;</td><td>0</td><td>Economic (high)</td></tr>
+  <tr><td>Bust</td><td>1</td><td>1-&infin;</td><td>0</td><td>Economic (low)</td></tr>
+  <tr><td>Civil Liberty</td><td>1</td><td>1-&infin;</td><td>0</td><td>Security (high)</td></tr>
+  <tr><td>Civil Unrest</td><td>1</td><td>1-&infin;</td><td>0</td><td>Security (low)</td></tr>
+  <tr><td>Investment</td><td>1</td><td>1-&infin;</td><td>0</td><td>Economic (very high)</td></tr>
+  <tr><td>Lockdown</td><td>1</td><td>1-&infin;</td><td>0</td><td>Security (very low)</td></tr>
+</tbody>
+</table>
+
+<h3>Conflict States</h3>
+<table>
+<colgroup><col style="width:30%"><col style="width:15%"><col style="width:15%"><col style="width:15%"><col style="width:25%"></colgroup>
+<thead><tr><th>State</th><th>Pending</th><th>Duration</th><th>Cooldown</th><th>Lever</th></tr></thead>
+<tbody>
+  <tr><td>Election</td><td>1</td><td>4-7</td><td>1</td><td>Election missions</td></tr>
+  <tr><td>War / Civil War</td><td>1</td><td>4-7</td><td>1</td><td>CZ wins</td></tr>
+</tbody>
+</table>
+
+<h3>Event States</h3>
+<table>
+<colgroup><col style="width:28%"><col style="width:12%"><col style="width:15%"><col style="width:15%"><col style="width:15%"><col style="width:15%"></colgroup>
+<thead><tr><th>State</th><th>Pending</th><th>Duration</th><th>Cooldown</th><th>Inf/tick</th><th>Leads to</th></tr></thead>
+<tbody>
+  <tr><td>Blight</td><td>0</td><td>1-7</td><td>14</td><td>-1%</td><td>Famine</td></tr>
+  <tr><td>Drought</td><td>0</td><td>1-?</td><td>14</td><td>0</td><td>Inf. Failure</td></tr>
+  <tr><td>Expansion</td><td>3</td><td>5-10</td><td>2</td><td>-15% end</td><td>-</td></tr>
+  <tr><td>Famine</td><td>0</td><td>3-28</td><td>14</td><td>0</td><td>-</td></tr>
+  <tr><td>Inf. Failure</td><td>0</td><td>1-&infin;</td><td>14</td><td>-1%</td><td>-</td></tr>
+  <tr><td>Natural Disaster</td><td>0</td><td>1-?</td><td>14</td><td>0</td><td>-</td></tr>
+  <tr><td>Outbreak</td><td>3</td><td>3-28</td><td>14</td><td>0</td><td>-</td></tr>
+  <tr><td>Pirate Attack</td><td>0</td><td>1-?</td><td>14</td><td>0</td><td>-</td></tr>
+  <tr><td>Public Holiday</td><td>0</td><td>2</td><td>14</td><td>+1%</td><td>-</td></tr>
+  <tr><td>Retreat</td><td>1</td><td>6</td><td>1</td><td>-2%</td><td>Removal</td></tr>
+  <tr><td>Terrorist Attack</td><td>0</td><td>3</td><td>14</td><td>-1%</td><td>-</td></tr>
+</tbody>
+</table>
+
+<hr>
+
+<!-- Slider States Detail -->
+<h2 id="slider-states">Slider States</h2>
+
+<h3 id="boom">Boom</h3>
+<p>Faction is doing well economically. Trade profits and demand increase (supply 1.7-2.4x normal). Good opportunity for profitable trade loops.</p>
+<ul>
+  <li><strong>Get in:</strong> High-demand trade, source &amp; return missions, donations, exploration data</li>
+  <li><strong>Get out:</strong> Negative economic activity — unprofitable trade, smuggling, economic missions targeting the faction</li>
+  <li><strong>Watch out:</strong> Pushing the economy slider too high leads to Investment instead</li>
+</ul>
+
+<h3 id="bust">Bust</h3>
+<p>Faction can't pay its bills. Demand for narcotics, food cartridges, and liquor rises. Supply drops significantly.</p>
+<ul>
+  <li><strong>Get out:</strong> Profitable high-demand trade, exploration data, economic missions. Also: assassinate pirate leader, cargo transfers of illegal drugs, hostage rescue missions</li>
+  <li><strong>Force it:</strong> Smuggling and any negative economic action</li>
+</ul>
+
+<h3 id="civil-liberty">Civil Liberty</h3>
+<p>Security slider above "None." Thought to double the effect of combat bounties and bonds.</p>
+<ul>
+  <li><strong>Get in:</strong> Drop combat bounties, do combat-related missions, combat bonds</li>
+  <li><strong>Get out:</strong> Negative security actions — murders, combat missions against the faction</li>
+</ul>
+
+<h3 id="civil-unrest">Civil Unrest</h3>
+<p>Security slider below "None." Increased piracy chances. Drives demand for narcotics, liquor, personal weapons.</p>
+<ul>
+  <li><strong>Get in:</strong> Murder, violent crimes, combat missions against the faction</li>
+  <li><strong>Get out:</strong> Drop combat bounties, clear pirate/weapon fire/terrorist USS, take combat missions for the faction</li>
+</ul>
+
+<h3 id="investment">Investment</h3>
+<p>Boom 2.0 — economy is thriving. Huge supply of agronomic treatment and insulating membranes. Dramatically increased demand and prices for painite and other goods.</p>
+<ul>
+  <li><strong>Get in:</strong> Positive trade with stations (not carriers), economic missions, exploration data</li>
+  <li><strong>Get out:</strong> Negative economic activity — unprofitable trade, smuggling, economic missions targeting the faction</li>
+</ul>
+
+<h3 id="lockdown">Lockdown</h3>
+<p>Completely closes the controlling faction's stations. Influence bleeds daily to other factions.</p>
+<ul>
+  <li><strong>Get out:</strong> Only combat bounties work during lockdown</li>
+  <li><strong>Force it:</strong> Negative security activity — combat missions targeting the faction, smuggling illegal weapons (battle weapons, landmines), attacking Goliaths at Odyssey settlements</li>
+  <li><strong>Defensive use:</strong> If facing a much stronger adversary, putting your own faction in lockdown slows them down (only bounties work against you), buying time to focus elsewhere</li>
+</ul>
+
+<hr>
+
+<!-- Event States Detail -->
+<h2 id="event-states">Event States</h2>
+
+<h3 id="blight">Blight</h3>
+<p>Disease affecting crop yields. Food and basic medicine demand rises. Agricultural economies lose food supply. Agronomic treatment gets 20x demand at 1.5x price. <strong>Leads to Famine if untreated.</strong></p>
+<ul>
+  <li><strong>Get in:</strong> Random, cannot be forced. Possibly related to the economic slider being low (Bust state)</li>
+  <li><strong>Get out:</strong> Trade agronomic treatments from nearby station markets (not fleet carriers)</li>
+</ul>
+
+<h3 id="drought">Drought</h3>
+<p>Lack of water. Food availability drops dramatically. Demand for grain, fruits &amp; vegetables, water, and basic medicines increases. <strong>Prolonged drought leads to Infrastructure Failure.</strong></p>
+<ul>
+  <li><strong>Get in:</strong> Random</li>
+  <li><strong>Get out:</strong> Deliver water and emergency supplies from nearby systems (not fleet carriers)</li>
+</ul>
+
+<h3 id="famine">Famine</h3>
+<p>Faction can't feed itself. Generates support missions in nearby systems (highly profitable — random Commanders may help inadvertently).</p>
+<ul>
+  <li><strong>Get in:</strong> Force the economic slider down — negative trade, smuggling, missions targeting the faction economically</li>
+  <li><strong>Get out:</strong> Trade high-demand foods. Food donation missions, source &amp; return food missions. Also: cargo transfer of illegal food, bulk scientist passengers, credit donations for famine</li>
+</ul>
+
+<h3 id="infrastructure-failure">Infrastructure Failure</h3>
+<p>Generates Odyssey power-on/restore missions. Security slider and influence take a daily hit. Trade in machinery is suggested by the game but evidence of effectiveness is inconclusive.</p>
+<ul>
+  <li><strong>Get in:</strong> Unclear. Possibly caused by excessive combat bounties/bonds (too many wars). May take ~14 days to manifest</li>
+  <li><strong>Get out:</strong> Drop combat bounties regularly, take Odyssey power-on/restore missions. Trade high-demand machinery from stations (not carriers). Or wait.</li>
+</ul>
+
+<h3 id="outbreak">Outbreak</h3>
+<p>Disease outbreak. Likely related to untreated Bust or possibly biowaste delivery missions.</p>
+<ul>
+  <li><strong>Get in:</strong> Very unclear. Possibly a side effect of biowaste delivery missions or excessive bounties/bonds</li>
+  <li><strong>Get out:</strong> Outbreak donation missions, outbreak data courier missions. Bounties do NOT work.</li>
+</ul>
+
+<h3 id="pirate-attack">Pirate Attack</h3>
+<p>More pirate USS appear. Interdictions increase. Weapon demand rises, some goods prices skyrocket.</p>
+<ul>
+  <li><strong>Get in:</strong> Not predictable, likely triggered by high trade activity (Boom). Don't clear pirate USS</li>
+  <li><strong>Get out:</strong> Clear pirate USS, drop combat bounties, kill pirate lord missions, trade legal weapons</li>
+</ul>
+
+<h3 id="public-holiday">Public Holiday</h3>
+<p>Things are going well. +1% influence per tick. Duration is only 2 days.</p>
+<ul>
+  <li><strong>Get in:</strong> Keep the faction happy — missions, high-demand trade, exploration data, bounties. Exact trigger unknown</li>
+  <li><strong>Get out:</strong> Pull down the economic slider with negative actions</li>
+</ul>
+
+<h3 id="natural-disaster">Natural Disaster</h3>
+<p>Rare, often considered "FDev hand of God." Very unclear triggers. Insufficient data on mechanics.</p>
+<ul>
+  <li><strong>Get in:</strong> You don't. It happens.</li>
+  <li><strong>Get out:</strong> Do everything — missions, trade, exploration data, bounties</li>
+</ul>
+
+<h3 id="terrorist-attack">Terrorist Attack</h3>
+<p>-1% influence per tick for 3 days. 14-day cooldown.</p>
+<ul>
+  <li><strong>Get in:</strong> Unknown triggers</li>
+  <li><strong>Get out:</strong> Security-positive actions — combat bounties, combat missions for the faction</li>
+</ul>
+
+<hr>
+<p style="font-size:0.8em; color:var(--text-dim);">State data derived from <em>The Complete BGS Guide 2025 v3.0</em> by Cmdr Purrfect (CC BY-NC-SA 4.0) and ED BGS community testing.</p>
+
+</main>
+
+</div>
+</body>
+</html>

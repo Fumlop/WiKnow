@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Actions Reference — BGS Guide | EDIntel Wiki</title>
+<link rel="stylesheet" href="../css/wiki.css">
+</head>
+<body>
+<div class="wiki-layout">
+
+<nav class="wiki-sidebar">
+  <a href="../index.html" class="sidebar-brand">EDIntel Wiki</a>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">PowerPlay</div>
+    <ul class="sidebar-nav">
+      <li><a href="../pcz-guide.html">PCZ Guide</a></li>
+    </ul>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">BGS</div>
+    <ul class="sidebar-nav">
+      <li><a href="influence.html">Influence</a></li>
+      <li><a href="economy-boost.html">Economy Boost</a></li>
+      <li><a href="conflicts.html">Wars &amp; Elections</a></li>
+      <li><a href="expansion-retreat.html">Expansion &amp; Retreat</a></li>
+      <li><a href="states.html">States Reference</a></li>
+      <li><a href="actions.html" class="active">Actions Reference</a></li>
+    </ul>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Technical Help</div>
+    <ul class="sidebar-nav">
+    </ul>
+  </div>
+</nav>
+
+<main class="wiki-content">
+
+<nav class="breadcrumb">
+  <a href="../index.html">Wiki</a> <span class="sep">/</span>
+  <a href="index.html">BGS</a> <span class="sep">/</span>
+  <span>Actions Reference</span>
+</nav>
+
+<h1>Actions Quick Reference</h1>
+<p class="subtitle">What each action affects — a cheat sheet for BGS operatives.</p>
+
+<!-- Actions Table -->
+<h2 id="actions-table">Actions &amp; Effects</h2>
+
+<p>Each action affects one or more BGS dimensions. <strong>Up</strong> = positive for the controlling faction, <strong>Down</strong> = negative.</p>
+
+<table>
+<colgroup><col style="width:28%"><col style="width:14%"><col style="width:14%"><col style="width:14%"><col style="width:30%"></colgroup>
+<thead><tr><th>Action</th><th>Economic</th><th>Security</th><th>Influence</th><th>Conflict / Other</th></tr></thead>
+<tbody>
+  <tr><td><strong>Trade (legal, profitable)</strong></td><td>Up</td><td>-</td><td>Up</td><td>Election</td></tr>
+  <tr><td><strong>Trade food</strong></td><td>Up</td><td>-</td><td>Up</td><td>Election</td></tr>
+  <tr><td><strong>Trade medicines</strong></td><td>Up</td><td>-</td><td>Up</td><td>Election. Outbreak down</td></tr>
+  <tr><td><strong>Trade weapons</strong></td><td>Up</td><td>Up</td><td>Up</td><td>Election. Pirate attack down</td></tr>
+  <tr><td><strong>Smuggle</strong></td><td>Down</td><td>-</td><td>Down</td><td>Election. Pirate attack up</td></tr>
+  <tr><td><strong>Smuggle food</strong></td><td>Down</td><td>-</td><td>Down</td><td>Election</td></tr>
+  <tr><td><strong>Smuggle medicines</strong></td><td>Down</td><td>-</td><td>Down</td><td>Election. Outbreak down</td></tr>
+  <tr><td><strong>Smuggle weapons</strong></td><td>Down</td><td>Down</td><td>Down</td><td>Election</td></tr>
+  <tr><td><strong>Redeem bounties</strong></td><td>-</td><td>Up</td><td>Up</td><td>War / Civil War. Pirate attack down</td></tr>
+  <tr><td><strong>Redeem combat bonds</strong></td><td>-</td><td>Up</td><td>-</td><td>War / Civil War. Pirate attack / Outbreak up</td></tr>
+  <tr><td><strong>Sell exploration data</strong></td><td>Up</td><td>-</td><td>Up</td><td>Election. Outbreak down</td></tr>
+  <tr><td><strong>Search &amp; Rescue</strong></td><td>-</td><td>Up</td><td>Up</td><td>Election</td></tr>
+  <tr><td><strong>Violent crimes / murder</strong></td><td>-</td><td>Down</td><td>Down</td><td>War / Civil War</td></tr>
+  <tr><td><strong>Missions</strong></td><td>Varies</td><td>Varies</td><td>Varies</td><td>Varies by mission type</td></tr>
+</tbody>
+</table>
+
+<div class="callout callout-info">
+  <strong>Not comprehensive.</strong> For the full list of known action-to-effect mappings, see the <a href="https://cdb.sotl.org.uk/missions" target="_blank">Colonia Census mission database</a>.
+</div>
+
+<hr>
+
+<!-- Ethos Table -->
+<h2 id="ethos">Ethos / Social Groups</h2>
+
+<p>A faction's ethos determines black market availability and conflict types.</p>
+
+<table>
+<colgroup><col style="width:30%"><col style="width:17.5%"><col style="width:17.5%"><col style="width:17.5%"><col style="width:17.5%"></colgroup>
+<thead><tr><th></th><th>Criminals</th><th>Autocrats</th><th>Corporations</th><th>Social</th></tr></thead>
+<tbody>
+  <tr><td><strong>Black markets</strong></td><td>Open</td><td>Closed</td><td>Closed</td><td>Open</td></tr>
+  <tr><td><strong>Illegal missions</strong></td><td>Many</td><td>Average</td><td>Average</td><td>Average</td></tr>
+  <tr><td><strong>Same-ethos conflict</strong></td><td>War</td><td>Election</td><td>Election</td><td>Election</td></tr>
+</tbody>
+</table>
+
+<hr>
+
+<!-- Negative Actions -->
+<h2 id="negative-actions">Reducing Influence</h2>
+
+<h3>Murder (Clean Kills)</h3>
+<p>The most impactful negative action. Find clean (non-wanted) ships or NPCs of the target faction and destroy them.</p>
+<ul>
+  <li><strong>Best source:</strong> Odyssey settlements (no ATR response)</li>
+  <li>Industrial settlements: 3-4 ships, up to 8</li>
+  <li>Military settlements: 3-4 ships (tougher)</li>
+  <li>Tourist/Mining settlements: 1-2 if lucky</li>
+  <li>Also: nav beacons, famine distribution centers, stations, installations</li>
+  <li>Jump to supercruise and drop back in to respawn ships</li>
+</ul>
+
+<h3>Unprofitable Trade</h3>
+<p>Selling goods at a loss to a station controlled by the target faction reduces their economic slider and influence.</p>
+
+<h3>Smuggling</h3>
+<p>Selling illegal or stolen goods at a black market reduces the station owner's economic slider and influence. Exception: anarchies benefit from stolen goods (boosts their economy slider).</p>
+
+<h3>Failing Missions</h3>
+<p>Deliberately failing missions hurts the issuing faction. This is generally less effective than other methods.</p>
+
+<hr>
+
+<!-- Reputation -->
+<h2 id="reputation">Reputation Tips</h2>
+
+<h3>Exobiology is portable reputation</h3>
+<p>Exobiology data has <strong>no BGS influence effect</strong> but restores reputation extremely fast. Drop 60-90 mCr of exobiology data at a controlling faction's station for instant allied status.</p>
+
+<div class="callout callout-tip">
+  <strong>Recovering from hostile:</strong>
+  <ol>
+    <li>Go to a hazardous resource site in a system they control. Earn 5-10 mCr of combat bounties.</li>
+    <li>Hand the bounties in at a station in a system where they're present but don't control. This gets you out of hostile.</li>
+    <li>Go to their station with Vista Genomics. Drop 60-90 mCr of exobiology data. Instant allied.</li>
+  </ol>
+</div>
+
+<hr>
+
+<!-- Fleet Carriers -->
+<h2 id="fleet-carriers">Fleet Carrier Rules</h2>
+
+<table>
+<colgroup><col style="width:50%"><col style="width:25%"><col style="width:25%"></colgroup>
+<thead><tr><th>Action</th><th>BGS Effect</th><th>Notes</th></tr></thead>
+<tbody>
+  <tr><td>Sell to carrier market</td><td>None</td><td></td></tr>
+  <tr><td>Buy from carrier market</td><td>Diminished</td><td>Some reputation and economy slider effect</td></tr>
+  <tr><td>Transfer via carrier hold, sell at station</td><td>Full</td><td>Retains original buy price</td></tr>
+  <tr><td>Transfer stolen goods via carrier, sell at black market</td><td>Full</td><td>Works for smuggling too</td></tr>
+  <tr><td>Fill mission from carrier supplies</td><td>Full</td><td>Influence from mission completion, not trade</td></tr>
+  <tr><td>Sell mined goods at station</td><td>None</td><td>No trade influence, no economy slider. Use as mission commodity instead</td></tr>
+</tbody>
+</table>
+
+<hr>
+
+<!-- Ticks -->
+<h2 id="ticks">Daily Tick</h2>
+
+<p>Every day, the BGS processes a "tick" in three phases:</p>
+
+<ol>
+  <li><strong>Conflict resolution</strong> — CZ wins tallied, day winners decided, concluded conflicts pay out</li>
+  <li><strong>State resolution</strong> — states introduced or concluded. Expansion tax applied. Retreats processed.</li>
+  <li><strong>Influence distribution</strong> — all accumulated influence from player actions is applied</li>
+</ol>
+
+<p>The tick spreads through the galaxy at various times. Hand in all trade, exploration data, and missions <strong>before the tick</strong> for them to count on that day.</p>
+
+<p>There is also a <strong>weekly server maintenance tick</strong> (Thursdays) which handles colonization asset incorporation and other server-level changes.</p>
+
+<hr>
+<p style="font-size:0.8em; color:var(--text-dim);">Action effects derived from <em>The Complete BGS Guide 2025 v3.0</em> by Cmdr Purrfect (CC BY-NC-SA 4.0) and the <a href="https://cdb.sotl.org.uk/">Colonia Census</a>.</p>
+
+</main>
+
+</div>
+</body>
+</html>

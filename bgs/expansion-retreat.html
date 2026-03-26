@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expansion &amp; Retreat — BGS Guide | EDIntel Wiki</title>
+<link rel="stylesheet" href="../css/wiki.css">
+</head>
+<body>
+<div class="wiki-layout">
+
+<nav class="wiki-sidebar">
+  <a href="../index.html" class="sidebar-brand">EDIntel Wiki</a>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">PowerPlay</div>
+    <ul class="sidebar-nav">
+      <li><a href="../pcz-guide.html">PCZ Guide</a></li>
+    </ul>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">BGS</div>
+    <ul class="sidebar-nav">
+      <li><a href="influence.html">Influence</a></li>
+      <li><a href="economy-boost.html">Economy Boost</a></li>
+      <li><a href="conflicts.html">Wars &amp; Elections</a></li>
+      <li><a href="expansion-retreat.html" class="active">Expansion &amp; Retreat</a></li>
+      <li><a href="states.html">States Reference</a></li>
+      <li><a href="actions.html">Actions Reference</a></li>
+    </ul>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Technical Help</div>
+    <ul class="sidebar-nav">
+    </ul>
+  </div>
+</nav>
+
+<main class="wiki-content">
+
+<nav class="breadcrumb">
+  <a href="../index.html">Wiki</a> <span class="sep">/</span>
+  <a href="index.html">BGS</a> <span class="sep">/</span>
+  <span>Expansion &amp; Retreat</span>
+</nav>
+
+<h1>Expansion &amp; Retreat</h1>
+<p class="subtitle">How factions grow into new systems and how they get pushed out.</p>
+
+<!-- Expansion -->
+<h2 id="expansion">Expansion</h2>
+
+<h3 id="trigger">Trigger</h3>
+<p>A faction that holds <strong>&gt;75% influence</strong> in a system for at least one tick will enter pending expansion. Once pending, expansion cannot be stopped.</p>
+
+<h3 id="timeline">Timeline</h3>
+
+<table>
+<colgroup><col style="width:30%"><col style="width:20%"><col style="width:50%"></colgroup>
+<thead><tr><th>Phase</th><th>Duration</th><th>Notes</th></tr></thead>
+<tbody>
+  <tr><td><strong>Pending</strong></td><td>3 days</td><td>Source system chosen on day 1 (shown in station news)</td></tr>
+  <tr><td><strong>Active</strong></td><td>5-10 days</td><td>Cannot be stopped. Target is announced.</td></tr>
+  <tr><td><strong>Cooldown</strong></td><td>2 days</td><td>Other states (e.g. Boom) can still run during cooldown</td></tr>
+  <tr><td><strong>Expansion tax</strong></td><td>Instant</td><td>-15% influence in source system on completion</td></tr>
+</tbody>
+</table>
+
+<h3 id="expansion-cube">The Expansion Cube</h3>
+
+<p>Expansion targets are found within a cube centered on the source system:</p>
+
+<table>
+<colgroup><col style="width:35%"><col style="width:30%"><col style="width:35%"></colgroup>
+<thead><tr><th>Range</th><th>Cube edge</th><th>Max diagonal distance</th></tr></thead>
+<tbody>
+  <tr><td><strong>Normal</strong></td><td>20 ly</td><td>~34 ly (20 &times; &radic;3)</td></tr>
+  <tr><td><strong>Extended</strong> (after 1 fail)</td><td>30 ly</td><td>~52 ly (30 &times; &radic;3)</td></tr>
+</tbody>
+</table>
+
+<p>Most expansions land within 20 ly. Use Inara's "Expansion targets" tab to see candidates.</p>
+
+<h3 id="rules">Rules of Expansion (priority order)</h3>
+
+<ol>
+  <li>System the faction has <strong>never been to</strong>, with fewer than 7 factions</li>
+  <li>System with <strong>exactly 7 factions</strong> — triggers an invasion war against the lowest non-native faction</li>
+  <li>System the faction was <strong>previously retreated from</strong>, with fewer than 7 factions</li>
+  <li><strong>Expansion fails</strong> — next attempt gets extended range (even from a different system)</li>
+  <li><strong>Second fail</strong> — that system is <strong>permanently blocked</strong> from expansion by any faction</li>
+</ol>
+
+<p>If multiple systems qualify at the same priority, the system with the lowest-influence target tends to be picked. Permit-locked systems (Sol, Shinrarta Dezhra, etc.) generally cannot be expanded into.</p>
+
+<div class="callout callout-warn">
+  <strong>Permanent block risk:</strong> A third expansion attempt from a system that has failed twice will permanently prevent any faction from ever expanding from that system. Be careful with failed expansions.
+</div>
+
+<h3 id="multiple-sources">Multiple systems above 75%</h3>
+<p>If two or more systems are above 75%, the game chooses the expansion source on the first day of pending. It reportedly favors the "happiest" system, but in practice the choice appears somewhat random. To control which system you expand from, keep only one system above 75%.</p>
+
+<h3 id="diplomacy">Expansion diplomacy</h3>
+<ul>
+  <li>Before expanding, check if the target system has an active PMF. Search the Squadron hub, Inara, or ask on the ED BGS Discord.</li>
+  <li>Honor the "first there owns the system" golden rule. You'll be a guest.</li>
+  <li>If a Commander hasn't logged on in 6+ months and you can't reach squadron leadership, the PMF is likely defunct.</li>
+</ul>
+
+<hr>
+
+<!-- Retreat -->
+<h2 id="retreat">Retreat</h2>
+
+<h3 id="retreat-trigger">Trigger</h3>
+<p>A faction whose influence drops <strong>below 2.5%</strong> for one day enters retreat. Once triggered, retreat is locked in.</p>
+
+<h3 id="retreat-timeline">Timeline</h3>
+
+<table>
+<colgroup><col style="width:30%"><col style="width:20%"><col style="width:50%"></colgroup>
+<thead><tr><th>Phase</th><th>Duration</th><th>Notes</th></tr></thead>
+<tbody>
+  <tr><td><strong>Pending</strong></td><td>1 day</td><td>Retreat is locked in, cannot be reversed</td></tr>
+  <tr><td><strong>Active</strong></td><td>6 days</td><td>-2% influence per tick</td></tr>
+  <tr><td><strong>Critical day</strong></td><td>Day 5 &rarr; 6</td><td>Only this transition matters for the outcome</td></tr>
+  <tr><td><strong>Cooldown</strong></td><td>1 day</td><td></td></tr>
+</tbody>
+</table>
+
+<div class="callout callout-info">
+  <strong>The critical day:</strong> On the last day of retreat, if the faction is still below 2.5%, they leave the system. If you've pushed them above 2.5% by day 5 going into day 6, they survive. Push hard from day 4 onwards regardless of which side you're on.
+</div>
+
+<h3>Forcing a retreat</h3>
+<ul>
+  <li>Murder (clean kills) is the most effective method</li>
+  <li>Violent combat missions against the faction</li>
+  <li>Smuggling and negative trade</li>
+  <li>Boost all other factions to steal influence from the target</li>
+</ul>
+
+<h3>Preventing a retreat</h3>
+<ul>
+  <li>Drop combat bounties, do profitable trade, drop exploration data</li>
+  <li>Run trade and combat missions for the faction</li>
+  <li>Focus effort on day 4-6 — earlier days matter less</li>
+</ul>
+
+<hr>
+
+<!-- Colonization -->
+<h2 id="colonization">Colonization</h2>
+
+<p>Colonization lets you create a new system for your faction, but with limitations:</p>
+
+<ul>
+  <li>Must be within <strong>15 ly</strong> of an existing system you control</li>
+  <li>Your faction starts at 100% but with <strong>no BGS sliders</strong> until the first asset is completed</li>
+  <li>First asset gets incorporated during the <strong>weekly server tick</strong>, then normal BGS kicks in</li>
+  <li>You cannot spread other factions to the new system until at least one asset exists</li>
+  <li>To backfill: other factions must be &gt;75% in a system within 20 ly and in control</li>
+  <li>You can expand multiple factions in at once if multiple qualifying systems exist nearby</li>
+  <li>To deny a specific faction: fill the system with 7 factions total</li>
+</ul>
+
+<hr>
+<p style="font-size:0.8em; color:var(--text-dim);">Expansion and retreat mechanics derived from <em>The Complete BGS Guide 2025 v3.0</em> by Cmdr Purrfect (CC BY-NC-SA 4.0).</p>
+
+</main>
+
+</div>
+</body>
+</html>

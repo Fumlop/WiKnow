@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Influence Works — BGS Guide | EDIntel Wiki</title>
+<link rel="stylesheet" href="../css/wiki.css">
+</head>
+<body>
+<div class="wiki-layout">
+
+<nav class="wiki-sidebar">
+  <a href="../index.html" class="sidebar-brand">EDIntel Wiki</a>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">PowerPlay</div>
+    <ul class="sidebar-nav">
+      <li><a href="../pcz-guide.html">PCZ Guide</a></li>
+    </ul>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">BGS</div>
+    <ul class="sidebar-nav">
+      <li><a href="influence.html" class="active">Influence</a>
+        <ul class="sub">
+          <li><a href="#buckets">The 4 Buckets</a></li>
+          <li><a href="#diminishing">Diminishing Returns</a></li>
+          <li><a href="#population">Population Scaling</a></li>
+          <li><a href="#daily-caps">Daily Caps</a></li>
+          <li><a href="#push-pull">Push &amp; Pull</a></li>
+        </ul>
+      </li>
+      <li><a href="economy-boost.html">Economy Boost</a></li>
+      <li><a href="conflicts.html">Wars &amp; Elections</a></li>
+      <li><a href="expansion-retreat.html">Expansion &amp; Retreat</a></li>
+      <li><a href="states.html">States Reference</a></li>
+      <li><a href="actions.html">Actions Reference</a></li>
+    </ul>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Technical Help</div>
+    <ul class="sidebar-nav">
+    </ul>
+  </div>
+</nav>
+
+<main class="wiki-content">
+
+<nav class="breadcrumb">
+  <a href="../index.html">Wiki</a> <span class="sep">/</span>
+  <a href="index.html">BGS</a> <span class="sep">/</span>
+  <span>Influence</span>
+</nav>
+
+<h1>How Influence Works</h1>
+<p class="subtitle">The core mechanics behind faction influence in the Background Simulation.</p>
+
+<div class="callout callout-info">
+  <strong>Key principle:</strong> Influence in a system always adds up to 100% across all factions. When you boost one faction, others lose influence. When you reduce one, others gain. The most effective approach is to do both — push your faction up AND pull competitors down.
+</div>
+
+<!-- The 4 Buckets -->
+<h2 id="buckets">The 4 Influence Buckets</h2>
+
+<p>Every BGS action falls into one of four buckets. Each bucket contributes independently to a faction's influence. The buckets, ranked by impact per effort:</p>
+
+<table>
+<colgroup><col style="width:25%"><col style="width:25%"><col style="width:25%"><col style="width:25%"></colgroup>
+<thead><tr><th>Bucket</th><th>Slider</th><th>Impact</th><th>Source activities</th></tr></thead>
+<tbody>
+  <tr><td><strong>Combat bounties</strong></td><td>Security</td><td>Highest</td><td>Bounty hunting, resource sites, nav beacons, KWS</td></tr>
+  <tr><td><strong>Exploration data</strong></td><td>Economic</td><td>High</td><td>Universal Cartographics, Roads to Riches</td></tr>
+  <tr><td><strong>Trade profits</strong></td><td>Economic</td><td>High</td><td>High-demand trade loops, station-to-station</td></tr>
+  <tr><td><strong>Missions</strong></td><td>Varies</td><td>Moderate</td><td>Any mission with INF reward (max 5 Horizons, 4 Odyssey)</td></tr>
+</tbody>
+</table>
+
+<div class="callout callout-tip">
+  <strong>Bounties are portable.</strong> You can earn bounties in one system and hand them in at a station in another system to boost your faction there — as long as the faction is present at that station. If the faction is absent, you still get reputation but no influence.
+</div>
+
+<p><strong>Exploration data has no counter.</strong> Unlike trade or combat, there is no negative action that can undo exploration data. It's the only "pure positive" bucket.</p>
+
+<!-- Diminishing Returns -->
+<h2 id="diminishing">Diminishing Returns</h2>
+
+<p>Each bucket follows a logarithmic curve. Your first contributions have the largest effect, and each additional contribution in the same bucket gives less and less. The curves taper off quickly.</p>
+
+<div class="callout callout-warn">
+  <strong>Do a little of each, not a lot of one.</strong> Because of diminishing returns, spreading effort across all four buckets produces more total influence than maxing out a single bucket. Doing 10 mCr bounties + 5 mCr exploration + 10 mCr trade + 15 INF missions is likely better than doing 35 mCr of bounties alone.
+</div>
+
+<p>The approximate formulas (credit: Cmdr Taipandot):</p>
+
+<table>
+<colgroup><col style="width:35%"><col style="width:65%"></colgroup>
+<thead><tr><th>Bucket</th><th>Formula</th></tr></thead>
+<tbody>
+  <tr><td>Bounties</td><td><code>1.33 &times; log2(bounty / 450,000)</code></td></tr>
+  <tr><td>Exploration</td><td><code>0.5 &times; log2(value / 1,000,000)</code></td></tr>
+  <tr><td>Trade</td><td><code>0.5 &times; log2(value / 100,000)</code></td></tr>
+  <tr><td>Missions</td><td><code>0.5 &times; log2(mission_influence)</code></td></tr>
+</tbody>
+</table>
+
+<p>These formulas give relative influence points, not direct percentage changes. The actual influence change also depends on population size (see below).</p>
+
+<!-- Population Scaling -->
+<h2 id="population">Population Scaling</h2>
+
+<p>Larger systems require more effort to shift the same amount of influence. The relationship is roughly:</p>
+
+<div class="callout callout-info">
+  <code>Effect = max(0.025, (1 - log(Population) / 10.875)) &times; Effort</code>
+  <p style="margin-top:8px;">A 1 billion population system needs about <strong>6x more effort</strong> than a 1,000 population system to achieve the same influence change.</p>
+</div>
+
+<p>What this means in practice:</p>
+<ul>
+  <li>Small systems (&lt;1M pop) are easy to move — a single operative can make a visible difference</li>
+  <li>Medium systems (1M-25M) need consistent daily work from a few people</li>
+  <li>Large systems (&gt;25M) require coordinated team effort</li>
+  <li>The maximum achievable daily influence shift is lower in large systems regardless of effort</li>
+</ul>
+
+<!-- Daily Caps -->
+<h2 id="daily-caps">Recommended Daily Contribution</h2>
+
+<p>Suggested effort per operative, per system, per day to get good results without burnout. Going beyond these amounts gives diminishing returns.</p>
+
+<table>
+<colgroup><col style="width:30%"><col style="width:23%"><col style="width:23%"><col style="width:24%"></colgroup>
+<thead><tr><th>Bucket</th><th>Small (&lt;1M)<br>Uncontested</th><th>Medium (1-25M)</th><th>Large (&gt;25M)<br>Contested</th></tr></thead>
+<tbody>
+  <tr><td><strong>Combat bounties</strong></td><td>10 mCr</td><td>20 mCr</td><td>30 mCr</td></tr>
+  <tr><td><strong>Exploration data</strong></td><td>5 mCr</td><td>10 mCr</td><td>15 mCr</td></tr>
+  <tr><td><strong>Trade profits</strong></td><td>10 mCr</td><td>20 mCr</td><td>30 mCr</td></tr>
+  <tr><td><strong>Missions INF</strong></td><td>15 INF</td><td>25 INF</td><td>50 INF</td></tr>
+</tbody>
+</table>
+
+<p>These are guidelines, not hard limits. If you're in a contested system, you may need more. If uncontested, even less can maintain control.</p>
+
+<!-- Push & Pull -->
+<h2 id="push-pull">Push &amp; Pull (Yin-Yang Model)</h2>
+
+<p>Since influence adds to 100%, there are two ways to help your faction:</p>
+
+<ul>
+  <li><strong>Push (positive):</strong> Boost your faction with bounties, trade, exploration, missions</li>
+  <li><strong>Pull (negative):</strong> Reduce a competitor with murder, smuggling, unprofitable trade, failed missions</li>
+</ul>
+
+<p>Doing both is significantly more effective than doing only positives. A good rule of thumb: pick one beneficiary faction and one victim faction per system.</p>
+
+<h3>Low influence factions steal disproportionately</h3>
+
+<p>Pushing a faction below ~10% influence has an outsized effect on the controlling faction. If you want to reduce a dominant faction, boosting several small factions a little each can be more effective than direct negative actions against the big faction. This is a useful force multiplier.</p>
+
+<h3>Defending high influence is harder</h3>
+
+<p>A faction at 60%+ influence is harder to push higher. Your defensive effort needs to be larger than an attacker's effort because they benefit from the low-influence boost effect. When defending, keep competitors low rather than just pushing yourself higher.</p>
+
+<hr>
+<p style="font-size:0.8em; color:var(--text-dim);">Influence mechanics derived from <em>The Complete BGS Guide 2025 v3.0</em> by Cmdr Purrfect (CC BY-NC-SA 4.0), with testing by Cmdrs Cluster Fox and Taipandot.</p>
+
+</main>
+
+</div>
+</body>
+</html>

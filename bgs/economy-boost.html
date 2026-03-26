@@ -20,14 +20,24 @@
   <div class="sidebar-section">
     <div class="sidebar-section-title">BGS</div>
     <ul class="sidebar-nav">
+      <li><a href="influence.html">Influence</a></li>
       <li><a href="economy-boost.html" class="active">Economy Boost</a>
         <ul class="sub">
           <li><a href="#mining-demand">Mining Demand</a></li>
           <li><a href="#economy-summary">Economy Summary</a></li>
-          <li><a href="#optimal-delivery">Optimal Delivery</a></li>
+          <li><a href="#optimal-delivery">Good Delivery</a></li>
           <li><a href="#load-splits">1282t Load Splits</a></li>
         </ul>
       </li>
+      <li><a href="conflicts.html">Wars &amp; Elections</a></li>
+      <li><a href="expansion-retreat.html">Expansion &amp; Retreat</a></li>
+      <li><a href="states.html">States Reference</a></li>
+      <li><a href="actions.html">Actions Reference</a></li>
+    </ul>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Technical Help</div>
+    <ul class="sidebar-nav">
     </ul>
   </div>
 </nav>
@@ -47,6 +57,9 @@
   <strong>How it works:</strong>
   <ul>
     <li>Selling commodities at a station where the controlling faction is present pushes that faction toward Boom</li>
+    <li><strong>Station economy is what matters, not the system economy.</strong> A system can list multiple economies, but each station has its own economy type that determines demand. Always check the station's economy in the system map or on Inara.</li>
+    <li>High demand (3 green bars) = best influence. Zero demand = station accepts infinite goods but <em>hurts</em> the controlling faction</li>
+    <li>Over-supplying demand (green bars turn red) causes negative BGS impact — only deliver what the station needs</li>
     <li>BGS profit cap is ~700 Cr/t — volume and commodity diversity matter more than expensive items</li>
     <li>Selling different commodities counts as separate transactions (~50% more effective)</li>
   </ul>
@@ -87,8 +100,8 @@
 </tbody>
 </table>
 
-<!-- Optimal Delivery -->
-<h2 id="optimal-delivery">Optimal Delivery per Economy Type</h2>
+<!-- Good Delivery -->
+<h2 id="optimal-delivery">Good Delivery per Economy Type</h2>
 
 <table class="tbl-3">
 <colgroup><col><col><col></colgroup>
@@ -259,11 +272,30 @@
 
 <hr>
 
+<!-- Mining Note -->
+<h2 id="mining-note">Mining &amp; BGS</h2>
+<div class="callout callout-warn">
+  <strong>Mined commodity sales do NOT affect trade influence or the economy slider.</strong> Mining is profitable, but selling mined goods at a station has no BGS trade effect. To use mined commodities for BGS, store them on a fleet carrier and use them to fulfil source &amp; return or mining missions — the influence comes from the mission completion, not the sale.
+</div>
+
+<!-- Fleet Carrier -->
+<h2 id="carrier-rules">Fleet Carrier Trade Rules</h2>
+<ul>
+  <li><strong>Selling to a carrier market:</strong> No BGS effect</li>
+  <li><strong>Buying from a carrier market:</strong> Diminished BGS effect (some reputation and economy slider impact)</li>
+  <li><strong>Transfers via carrier hold, then selling at station:</strong> Full BGS effect. Retains original buy price.</li>
+  <li><strong>Filling missions from carrier supplies:</strong> Works fine — influence comes from mission completion</li>
+</ul>
+<p>Intra-system trade loops (station to station within the same system) give more influence than cross-system loops, especially if you control both stations.</p>
+
+<hr>
+
 <p style="color: var(--text-dim); font-size: 0.8em;">
 Sources: <a href="https://inara.cz/elite/commodities-list/">INARA Commodities</a>,
 <a href="https://elite-dangerous.fandom.com/wiki/Commodities/Supply_and_Demand">ED Wiki Supply/Demand</a>,
 <a href="https://newp.io/trade">NEWP Trading Guide</a>,
-<a href="https://forums.frontier.co.uk/threads/bgs-trading-for-influence.357715/">Frontier Forums BGS Trading</a>
+<a href="https://forums.frontier.co.uk/threads/bgs-trading-for-influence.357715/">Frontier Forums BGS Trading</a>.
+Trade mechanics also derived from <em>The Complete BGS Guide 2025 v3.0</em> by Cmdr Purrfect (CC BY-NC-SA 4.0).
 </p>
 
 </main>
