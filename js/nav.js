@@ -30,7 +30,8 @@
         { href: '/bgs/expansion-retreat.html', label: 'Expansion & Retreat' },
         { href: '/bgs/states.html', label: 'States Reference' },
         { href: '/bgs/actions.html', label: 'Actions Reference' },
-        { href: '/ref/mining.html', label: 'Mining Table' }
+        { href: '/ref/mining.html', label: 'Ring Mining Table' },
+        { href: '/ref/ground-mining.html', label: 'Ground Mining Table' }
       ]
     },
     {

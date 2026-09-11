@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ground Mining Table — Winters Frosty Wiki</title>
+<link rel="stylesheet" href="../css/wiki.css">
+<style>
+  .ground-tbl td { text-align: center; font-size: 0.85em; }
+  .ground-tbl td:first-child { text-align: left; font-weight: 600; }
+  .ground-tbl thead th { font-size: 0.8em; }
+  .ground-tbl thead tr.samples th { font-size: 0.7em; font-weight: 400; color: var(--text-dim); }
+  .g-best { color: var(--success); font-weight: 700; }
+  .g-high { color: var(--success); }
+  .g-mid  { color: var(--warn); }
+  .g-low  { color: var(--text-dim); }
+</style>
+</head>
+<body>
+<div class="wiki-layout">
+
+<nav class="wiki-sidebar" id="wiki-nav"></nav>
+
+<main class="wiki-content">
+
+<nav class="breadcrumb">
+  <a href="../index.html">Wiki</a> <span class="sep">/</span>
+  <span>Ground Mining Table</span>
+</nav>
+
+<h1>Ground Mining Table</h1>
+<p class="subtitle">How often a material actually turned up, per body type, across every mining
+location read so far.</p>
+
+<div class="callout callout-info">
+  <strong>How to read it:</strong> a percentage is the share of that body type's mining locations
+  that carried the material. The row under each heading is how many locations the figure rests on.
+  Green is the best ground for that material. This is what was found, not what a body promises -
+  the resource list of a mining location is in no game feed.
+</div>
+
+<table class="ground-tbl">
+<colgroup><col style="width:22.3%"><col style="width:11.1%"><col style="width:11.1%"><col style="width:11.1%"><col style="width:11.1%"><col style="width:11.1%"><col style="width:11.1%"><col style="width:11.1%"></colgroup>
+<thead>
+<tr><th>Material</th><th>Metal-Rich</th><th>High Metal</th><th>Magma</th><th>Silicate</th><th>Rocky</th><th>Rocky Ice</th><th>Icy</th></tr>
+<tr class="samples"><th>locations read</th><th>114</th><th>210</th><th>57</th><th>164</th><th>164</th><th>14</th><th>124</th></tr>
+</thead>
+<tbody>
+  <tr><td>Diamond</td><td class="g-best">29.8%</td><td class="g-low">4.8%</td><td class="g-mid">8.8%</td><td class="g-low">1.2%</td><td class="g-low">1.8%</td><td></td><td></td></tr>
+  <tr><td>Ruby</td><td class="g-low">6.1%</td><td class="g-low">5.7%</td><td class="g-best">12.3%</td><td class="g-low">3.0%</td><td class="g-low">1.2%</td><td></td><td></td></tr>
+  <tr><td>Sapphire</td><td class="g-low">7.9%</td><td class="g-low">5.7%</td><td class="g-best">17.5%</td><td class="g-low">6.1%</td><td class="g-low">1.2%</td><td></td><td></td></tr>
+  <tr><td>Iridium</td><td class="g-best">29.8%</td><td class="g-mid">18.1%</td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td>Osmium</td><td class="g-high">33.3%</td><td class="g-best">42.9%</td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td>Platinum</td><td class="g-best">46.5%</td><td class="g-high">37.1%</td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td>Rhodplumsite</td><td class="g-best">10.5%</td><td class="g-low">3.3%</td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td>Alexandrite</td><td></td><td></td><td class="g-best">35.1%</td><td class="g-low">6.7%</td><td class="g-low">2.4%</td><td></td><td></td></tr>
+  <tr><td>Bastnasite</td><td></td><td></td><td class="g-best">42.1%</td><td class="g-low">7.9%</td><td class="g-mid">9.1%</td><td></td><td></td></tr>
+  <tr><td>Grandidierite</td><td></td><td></td><td class="g-low">7.0%</td><td class="g-best">12.8%</td><td class="g-mid">12.2%</td><td></td><td></td></tr>
+  <tr><td>Helium</td><td class="g-low">5.3%</td><td class="g-low">6.7%</td><td class="g-low">5.3%</td><td class="g-best">51.8%</td><td class="g-mid">9.1%</td><td></td><td></td></tr>
+  <tr><td>Jadeite</td><td></td><td></td><td class="g-mid">10.5%</td><td class="g-best">55.5%</td><td class="g-high">22.0%</td><td></td><td></td></tr>
+  <tr><td>Magnesite</td><td></td><td></td><td class="g-high">21.1%</td><td class="g-high">30.5%</td><td class="g-best">43.3%</td><td></td><td></td></tr>
+  <tr><td>Monazite</td><td></td><td></td><td class="g-best">45.6%</td><td class="g-low">7.9%</td><td class="g-low">2.4%</td><td></td><td></td></tr>
+  <tr><td>Olivine</td><td></td><td></td><td class="g-best">56.1%</td><td class="g-mid">11.0%</td><td class="g-low">5.5%</td><td class="g-mid">14.3%</td><td></td></tr>
+  <tr><td>Periclase Dunite</td><td></td><td></td><td class="g-low">1.8%</td><td class="g-low">4.9%</td><td class="g-best">11.0%</td><td></td><td></td></tr>
+  <tr><td>Quartz Pyroxenite</td><td></td><td></td><td class="g-best">17.5%</td><td class="g-low">3.7%</td><td></td><td></td><td></td></tr>
+  <tr><td>Serendibite</td><td></td><td></td><td class="g-best">31.6%</td><td class="g-low">4.9%</td><td class="g-low">2.4%</td><td></td><td></td></tr>
+  <tr><td>Thortveitite</td><td></td><td></td><td class="g-low">5.3%</td><td class="g-mid">9.8%</td><td class="g-best">12.2%</td><td></td><td></td></tr>
+  <tr><td>Deuterium</td><td></td><td></td><td></td><td class="g-low">2.4%</td><td class="g-low">6.7%</td><td class="g-high">35.7%</td><td class="g-best">54.0%</td></tr>
+  <tr><td>Helium-3</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="g-best">16.9%</td></tr>
+  <tr><td>Low Temp Diamonds</td><td></td><td></td><td class="g-low">3.5%</td><td class="g-low">5.5%</td><td class="g-low">3.7%</td><td class="g-low">7.1%</td><td class="g-best">26.6%</td></tr>
+</tbody>
+</table>
+
+<h2 id="body-types">What the columns mean</h2>
+<ul>
+  <li><strong>Metal-Rich</strong> and <strong>High Metal</strong> - the game's own body classes,
+  as the system map names them.</li>
+  <li><strong>Magma</strong> - a rocky body with metallic or rocky volcanism.</li>
+  <li><strong>Silicate</strong> - a rocky body with silicate volcanism. Magma and silicate carry
+  opposite materials, which is why they are not one column: monazite reads 45.6% on magma and 7.9%
+  on silicate, jadeite 10.5% and 55.5%.</li>
+  <li><strong>Rocky</strong> - a rocky body with no volcanism.</li>
+  <li><strong>Rocky Ice</strong> and <strong>Icy</strong> - the icy classes. Both rest on few
+  locations, so read them as a hint.</li>
+</ul>
+
+<hr>
+<p style="font-size:0.8em; color:var(--text-dim);">
+Snapshot from EDIntel, 2026-09-11 06:56 UTC. Static copy - it does not update on its own.
+</p>
+
+</main>
+
+</div>
+<script src="/js/nav.js"></script>
+</body>
+</html>
