@@ -6,6 +6,11 @@
 <title>Ground Mining Table &mdash; Winters Frosty Wiki</title>
 <link rel="stylesheet" href="../css/wiki.css">
 <style>
+  /* Eleven columns do not fit the wiki's 860 px reading width; this page gets
+     more room, and scrolls sideways on a phone rather than crushing the heads. */
+  .wiki-content { max-width: 1320px; }
+  .ground-wrap { overflow-x: auto; }
+  .ground-tbl { min-width: 980px; }
   .ground-tbl td { text-align: center; font-size: 0.85em; }
   .ground-tbl td:first-child { text-align: left; font-weight: 600; }
   .ground-tbl thead th { font-size: 0.8em; }
@@ -14,8 +19,10 @@
   .g-mid  { color: var(--warn); }
   .g-low  { color: var(--text-dim); }
   .g-price { font-variant-numeric: tabular-nums; white-space: nowrap; }
-  .ground-tbl thead th { text-transform: uppercase; }
-  .ground-tbl thead th .q { text-transform: none; font-weight: 400; color: var(--text-dim); }
+  .ground-tbl thead th { text-transform: uppercase; text-align: center; }
+  .ground-tbl thead th:first-child { text-align: left; }
+  .ground-tbl thead th .q { text-transform: none; font-weight: 400; color: var(--text-dim);
+                            white-space: nowrap; font-size: 0.9em; }
   .ground-tbl .rk-l { border-left: 1px solid var(--border, rgba(128,128,128,.45)); }
   .ground-tbl .rk-r { border-right: 1px solid var(--border, rgba(128,128,128,.45)); }
 </style>
@@ -38,15 +45,16 @@ location read so far.</p>
 
 <div class="callout callout-info">
   <strong>How to read it:</strong> a percentage is the share of that body type's mining locations
-  Green is the best ground for that material. The last two columns are what it sells for: the
+  that carried the material. Green is the best ground for that material. The last two columns are what it sells for: the
   median market and the best one seen. This is what was found, not what a body promises - the
   resource list of a mining location is in no game feed.
 </div>
 
+<div class="ground-wrap">
 <table class="ground-tbl">
-<colgroup><col style="width:34.0%"><col style="width:6.6%"><col style="width:6.6%"><col style="width:6.6%"><col style="width:6.6%"><col style="width:6.6%"><col style="width:6.6%"><col style="width:6.6%"><col style="width:6.6%"><col style="width:6.6%"><col style="width:6.6%"></colgroup>
+<colgroup><col style="width:14.0%"><col style="width:8.6%"><col style="width:8.6%"><col style="width:8.6%"><col style="width:8.6%"><col style="width:8.6%"><col style="width:8.6%"><col style="width:8.6%"><col style="width:8.6%"><col style="width:8.6%"><col style="width:8.6%"></colgroup>
 <thead>
-<tr><th>Material</th><th>metal-rich<br><span class="q">rock 0%</span></th><th>high-metal-content<br><span class="q">rock 60-68%</span></th><th class="rk-l">rock 80%+<br><span class="q">[none]</span></th><th>rock 80%+<br><span class="q">[metallic magma]</span></th><th>rock 80%+<br><span class="q">[rocky magma]</span></th><th class="rk-r">rock 80%+<br><span class="q">[silicate vapour geysers]</span></th><th>rocky-ice<br><span class="q">rock 52%</span></th><th>icy<br><span class="q">rock 12-18%</span></th><th>Median/t<br><span class="q">Cr/t</span></th><th>Best/t<br><span class="q">Cr/t</span></th></tr>
+<tr><th>Material</th><th>MR<br><span class="q">rock 0%</span></th><th>HMC<br><span class="q">rock 60-68%</span></th><th class="rk-l">rock 80%+<br><span class="q">[none]</span></th><th>rock 80%+<br><span class="q">[metallic magma]</span></th><th>rock 80%+<br><span class="q">[rocky magma]</span></th><th class="rk-r">rock 80%+<br><span class="q">[silicate geysers]</span></th><th>rocky-ice<br><span class="q">rock 52%</span></th><th>icy<br><span class="q">rock 12-18%</span></th><th>Median/t<br><span class="q">Cr/t</span></th><th>Best/t<br><span class="q">Cr/t</span></th></tr>
 </thead>
 <tbody>
   <tr><td>Diamond</td><td class="g-best">29.8%</td><td class="g-low">4.0%</td><td class="g-low rk-l">1.8%</td><td class="g-mid">8.6%</td><td class="g-mid">8.7%</td><td class="g-low rk-r">1.2%</td><td></td><td></td><td class="g-price">107k</td><td class="g-price">419k</td></tr>
@@ -88,6 +96,7 @@ location read so far.</p>
   <tr><td>Water</td><td></td><td></td><td class="rk-l"></td><td></td><td></td><td class="rk-r"></td><td class="g-high">78.6%</td><td class="g-best">99.2%</td><td class="g-price">1k</td><td class="g-price">5k</td></tr>
 </tbody>
 </table>
+</div>
 
 <h2 id="body-types">What the columns mean</h2>
 <ul>
@@ -100,7 +109,7 @@ location read so far.</p>
   <li><strong>rock 80%+ [none]</strong> - Rocky body, no volcanism, rock 90-91% on the bodies read.</li>
   <li><strong>rock 80%+ [metallic magma]</strong> - Rocky body with metallic magma, rock 91% on the bodies read.</li>
   <li><strong>rock 80%+ [rocky magma]</strong> - Rocky body with rocky magma, rock 91% on the bodies read.</li>
-  <li><strong>rock 80%+ [silicate vapour geysers]</strong> - Rocky body with silicate vapour geysers, rock 86-97% on the bodies read.</li>
+  <li><strong>rock 80%+ [silicate geysers]</strong> - Rocky body with silicate vapour geysers, rock 86-97% on the bodies read.</li>
   <li><strong>rocky-ice</strong> - Rocky ice body, rock 52% on the bodies read.</li>
   <li><strong>icy</strong> - Icy body, rock 12-18% on the bodies read.</li>
   <li>Magma and silicate geysers carry opposite materials, which is why they are not one
@@ -112,7 +121,7 @@ location read so far.</p>
 
 <hr>
 <p style="font-size:0.8em; color:var(--text-dim);">
-Generated from EDIntel, 2026-09-14 14:37 UTC.
+Generated from EDIntel, 2026-09-14 14:42 UTC.
 </p>
 
 </main>
