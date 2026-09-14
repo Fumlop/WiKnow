@@ -9,12 +9,15 @@
   .ground-tbl td { text-align: center; font-size: 0.85em; }
   .ground-tbl td:first-child { text-align: left; font-weight: 600; }
   .ground-tbl thead th { font-size: 0.8em; }
-  .ground-tbl thead tr.samples th { font-size: 0.7em; font-weight: 400; color: var(--text-dim); }
   .g-best { color: var(--success); font-weight: 700; }
   .g-high { color: var(--success); }
   .g-mid  { color: var(--warn); }
   .g-low  { color: var(--text-dim); }
   .g-price { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .ground-tbl thead th { text-transform: uppercase; }
+  .ground-tbl thead th .q { text-transform: none; font-weight: 400; color: var(--text-dim); }
+  .ground-tbl .rk-l { border-left: 1px solid var(--border, rgba(128,128,128,.45)); }
+  .ground-tbl .rk-r { border-right: 1px solid var(--border, rgba(128,128,128,.45)); }
 </style>
 </head>
 <body>
@@ -35,7 +38,6 @@ location read so far.</p>
 
 <div class="callout callout-info">
   <strong>How to read it:</strong> a percentage is the share of that body type's mining locations
-  that carried the material. The row under each heading is how many locations the figure rests on.
   Green is the best ground for that material. The last two columns are what it sells for: the
   median market and the best one seen. This is what was found, not what a body promises - the
   resource list of a mining location is in no game feed.
@@ -44,69 +46,72 @@ location read so far.</p>
 <table class="ground-tbl">
 <colgroup><col style="width:34.3%"><col style="width:7.3%"><col style="width:7.3%"><col style="width:7.3%"><col style="width:7.3%"><col style="width:7.3%"><col style="width:7.3%"><col style="width:7.3%"><col style="width:7.3%"><col style="width:7.3%"></colgroup>
 <thead>
-<tr><th>Material</th><th>Metal-Rich</th><th>High Metal</th><th>Volcanic Magma</th><th>Volcanic Silicate</th><th>Rocky</th><th>Rocky Ice</th><th>Icy</th><th>Median</th><th>Max</th></tr>
-<tr class="samples"><th>locations read</th><th>114</th><th>247</th><th>58</th><th>164</th><th>164</th><th>14</th><th>131</th><th>Cr/t</th><th>Cr/t</th></tr>
+<tr><th>Material</th><th>metal-rich<br><span class="q">rock 0%</span></th><th>high-metal-content<br><span class="q">rock 60-68%</span></th><th class="rk-l">rock 80%+<br><span class="q">[none]</span></th><th>rock 80%+<br><span class="q">[magma]</span></th><th class="rk-r">rock 80%+<br><span class="q">[silicate geysers]</span></th><th>rocky-ice<br><span class="q">rock 52%</span></th><th>icy<br><span class="q">rock 12-18%</span></th><th>Median/t<br><span class="q">Cr/t</span></th><th>Best/t<br><span class="q">Cr/t</span></th></tr>
 </thead>
 <tbody>
-  <tr><td>Diamond</td><td class="g-best">29.8%</td><td class="g-low">4.0%</td><td class="g-mid">8.6%</td><td class="g-low">1.2%</td><td class="g-low">1.8%</td><td></td><td></td><td class="g-price">108k</td><td class="g-price">521k</td></tr>
-  <tr><td>Ruby</td><td class="g-low">6.1%</td><td class="g-low">5.3%</td><td class="g-best">12.1%</td><td class="g-low">3.0%</td><td class="g-low">1.2%</td><td></td><td></td><td class="g-price">89k</td><td class="g-price">428k</td></tr>
-  <tr><td>Sapphire</td><td class="g-low">7.9%</td><td class="g-low">4.9%</td><td class="g-best">17.2%</td><td class="g-low">6.1%</td><td class="g-low">1.2%</td><td></td><td></td><td class="g-price">101k</td><td class="g-price">484k</td></tr>
-  <tr><td>Copper</td><td class="g-high">43.9%</td><td class="g-high">55.5%</td><td class="g-high">39.7%</td><td class="g-high">44.5%</td><td class="g-high">66.5%</td><td class="g-best">71.4%</td><td></td><td class="g-price">&mdash;</td><td class="g-price">&mdash;</td></tr>
-  <tr><td>Gold</td><td class="g-high">28.1%</td><td class="g-mid">19.0%</td><td class="g-high">25.9%</td><td class="g-high">31.7%</td><td class="g-best">32.3%</td><td></td><td></td><td class="g-price">45k</td><td class="g-price">67k</td></tr>
-  <tr><td>Haematite</td><td class="g-high">41.2%</td><td class="g-high">53.4%</td><td class="g-high">34.5%</td><td class="g-high">42.7%</td><td class="g-high">47.6%</td><td class="g-best">71.4%</td><td></td><td class="g-price">&mdash;</td><td class="g-price">&mdash;</td></tr>
-  <tr><td>Iridium</td><td class="g-best">29.8%</td><td class="g-mid">19.8%</td><td></td><td></td><td></td><td></td><td></td><td class="g-price">182k</td><td class="g-price">1.0M</td></tr>
-  <tr><td>Lithium</td><td class="g-high">37.7%</td><td class="g-best">45.3%</td><td></td><td></td><td></td><td></td><td></td><td class="g-price">&mdash;</td><td class="g-price">&mdash;</td></tr>
-  <tr><td>Osmium</td><td class="g-high">33.3%</td><td class="g-best">40.1%</td><td></td><td></td><td></td><td></td><td></td><td class="g-price">47k</td><td class="g-price">273k</td></tr>
-  <tr><td>Platinum</td><td class="g-best">46.5%</td><td class="g-high">38.5%</td><td></td><td></td><td></td><td></td><td></td><td class="g-price">58k</td><td class="g-price">303k</td></tr>
-  <tr><td>Rhodplumsite</td><td class="g-best">10.5%</td><td class="g-low">3.2%</td><td></td><td></td><td></td><td></td><td></td><td class="g-price">178k</td><td class="g-price">911k</td></tr>
-  <tr><td>Silver</td><td class="g-best">28.9%</td><td class="g-high">25.9%</td><td class="g-high">27.6%</td><td class="g-high">28.7%</td><td class="g-high">28.0%</td><td></td><td></td><td class="g-price">39k</td><td class="g-price">49k</td></tr>
-  <tr><td>Tantalum</td><td class="g-high">33.3%</td><td class="g-best">34.8%</td><td></td><td></td><td></td><td></td><td></td><td class="g-price">&mdash;</td><td class="g-price">&mdash;</td></tr>
-  <tr><td>Titanium</td><td class="g-high">44.7%</td><td class="g-best">52.6%</td><td></td><td></td><td></td><td></td><td></td><td class="g-price">&mdash;</td><td class="g-price">&mdash;</td></tr>
-  <tr><td>Uranium</td><td class="g-high">22.8%</td><td class="g-best">38.9%</td><td></td><td></td><td></td><td></td><td></td><td class="g-price">&mdash;</td><td class="g-price">&mdash;</td></tr>
-  <tr><td>Alexandrite</td><td></td><td></td><td class="g-best">34.5%</td><td class="g-low">6.7%</td><td class="g-low">2.4%</td><td></td><td></td><td class="g-price">209k</td><td class="g-price">987k</td></tr>
-  <tr><td>Bastnasite</td><td></td><td></td><td class="g-best">43.1%</td><td class="g-low">7.9%</td><td class="g-mid">9.1%</td><td></td><td></td><td class="g-price">68k</td><td class="g-price">347k</td></tr>
-  <tr><td>Grandidierite</td><td></td><td></td><td class="g-low">6.9%</td><td class="g-best">12.8%</td><td class="g-mid">12.2%</td><td></td><td></td><td class="g-price">190k</td><td class="g-price">831k</td></tr>
-  <tr><td>Helium</td><td class="g-low">5.3%</td><td class="g-low">6.1%</td><td class="g-low">5.2%</td><td class="g-best">51.8%</td><td class="g-mid">9.1%</td><td></td><td></td><td class="g-price">87k</td><td class="g-price">420k</td></tr>
-  <tr><td>Jadeite</td><td></td><td></td><td class="g-mid">10.3%</td><td class="g-best">55.5%</td><td class="g-high">22.0%</td><td></td><td></td><td class="g-price">29k</td><td class="g-price">215k</td></tr>
-  <tr><td>Magnesite</td><td></td><td></td><td class="g-high">22.4%</td><td class="g-high">30.5%</td><td class="g-best">43.3%</td><td></td><td></td><td class="g-price">33k</td><td class="g-price">168k</td></tr>
-  <tr><td>Monazite</td><td></td><td></td><td class="g-best">44.8%</td><td class="g-low">7.9%</td><td class="g-low">2.4%</td><td></td><td></td><td class="g-price">208k</td><td class="g-price">896k</td></tr>
-  <tr><td>Olivine</td><td></td><td></td><td class="g-best">55.2%</td><td class="g-mid">11.0%</td><td class="g-low">5.5%</td><td class="g-mid">14.3%</td><td></td><td class="g-price">27k</td><td class="g-price">138k</td></tr>
-  <tr><td>Palladium</td><td class="g-low">5.3%</td><td class="g-mid">10.5%</td><td class="g-mid">10.3%</td><td class="g-high">23.2%</td><td class="g-high">31.1%</td><td class="g-best">35.7%</td><td></td><td class="g-price">54k</td><td class="g-price">71k</td></tr>
-  <tr><td>Periclase Dunite</td><td></td><td></td><td class="g-low">1.7%</td><td class="g-low">4.9%</td><td class="g-best">11.0%</td><td></td><td></td><td class="g-price">161k</td><td class="g-price">769k</td></tr>
-  <tr><td>Quartz Pyroxenite</td><td></td><td></td><td class="g-best">17.2%</td><td class="g-low">3.7%</td><td></td><td></td><td></td><td class="g-price">40k</td><td class="g-price">204k</td></tr>
-  <tr><td>Samarium</td><td class="g-high">36.8%</td><td class="g-high">28.3%</td><td class="g-high">29.3%</td><td class="g-high">32.3%</td><td class="g-best">42.7%</td><td></td><td></td><td class="g-price">26k</td><td class="g-price">49k</td></tr>
-  <tr><td>Serendibite</td><td></td><td></td><td class="g-best">32.8%</td><td class="g-low">4.9%</td><td class="g-low">2.4%</td><td></td><td></td><td class="g-price">167k</td><td class="g-price">571k</td></tr>
-  <tr><td>Thorium</td><td class="g-high">39.5%</td><td class="g-high">34.0%</td><td class="g-high">22.4%</td><td class="g-high">31.7%</td><td class="g-best">47.6%</td><td></td><td></td><td class="g-price">&mdash;</td><td class="g-price">&mdash;</td></tr>
-  <tr><td>Thortveitite</td><td></td><td></td><td class="g-low">5.2%</td><td class="g-mid">9.8%</td><td class="g-best">12.2%</td><td></td><td></td><td class="g-price">161k</td><td class="g-price">769k</td></tr>
-  <tr><td>Uraninite</td><td></td><td></td><td class="g-high">22.4%</td><td class="g-high">40.9%</td><td class="g-best">49.4%</td><td></td><td></td><td class="g-price">&mdash;</td><td class="g-price">&mdash;</td></tr>
-  <tr><td>Deuterium</td><td></td><td></td><td></td><td class="g-low">2.4%</td><td class="g-low">6.7%</td><td class="g-high">35.7%</td><td class="g-best">53.4%</td><td class="g-price">35k</td><td class="g-price">179k</td></tr>
-  <tr><td>Helium-3</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="g-best">18.3%</td><td class="g-price">81k</td><td class="g-price">393k</td></tr>
-  <tr><td>Low Temp Diamonds</td><td></td><td></td><td class="g-low">3.4%</td><td class="g-low">5.5%</td><td class="g-low">3.7%</td><td class="g-low">7.1%</td><td class="g-best">26.0%</td><td class="g-price">113k</td><td class="g-price">553k</td></tr>
-  <tr><td>Methanol Monohydrate Crystals</td><td></td><td></td><td></td><td></td><td></td><td class="g-best">78.6%</td><td class="g-high">67.2%</td><td class="g-price">&mdash;</td><td class="g-price">&mdash;</td></tr>
-  <tr><td>Tritium</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="g-best">32.8%</td><td class="g-price">&mdash;</td><td class="g-price">&mdash;</td></tr>
-  <tr><td>Water</td><td></td><td></td><td></td><td></td><td></td><td class="g-high">78.6%</td><td class="g-best">99.2%</td><td class="g-price">&mdash;</td><td class="g-price">&mdash;</td></tr>
+  <tr><td>Diamond</td><td class="g-best">29.8%</td><td class="g-low">4.0%</td><td class="g-low rk-l">1.8%</td><td class="g-mid">8.6%</td><td class="g-low rk-r">1.2%</td><td></td><td></td><td class="g-price">107k</td><td class="g-price">419k</td></tr>
+  <tr><td>Ruby</td><td class="g-low">6.1%</td><td class="g-low">5.3%</td><td class="g-low rk-l">1.2%</td><td class="g-best">12.1%</td><td class="g-low rk-r">3.0%</td><td></td><td></td><td class="g-price">88k</td><td class="g-price">346k</td></tr>
+  <tr><td>Sapphire</td><td class="g-low">7.9%</td><td class="g-low">4.9%</td><td class="g-low rk-l">1.2%</td><td class="g-best">17.2%</td><td class="g-low rk-r">6.1%</td><td></td><td></td><td class="g-price">101k</td><td class="g-price">410k</td></tr>
+  <tr><td>Copper</td><td class="g-high">43.9%</td><td class="g-high">55.5%</td><td class="g-high rk-l">66.5%</td><td class="g-high">39.7%</td><td class="g-high rk-r">44.5%</td><td class="g-best">71.4%</td><td></td><td class="g-price">1k</td><td class="g-price">2k</td></tr>
+  <tr><td>Gold</td><td class="g-high">28.1%</td><td class="g-mid">19.0%</td><td class="g-best rk-l">32.3%</td><td class="g-high">25.9%</td><td class="g-high rk-r">31.7%</td><td></td><td></td><td class="g-price">45k</td><td class="g-price">68k</td></tr>
+  <tr><td>Haematite</td><td class="g-high">41.2%</td><td class="g-high">53.4%</td><td class="g-high rk-l">47.6%</td><td class="g-high">34.5%</td><td class="g-high rk-r">42.7%</td><td class="g-best">71.4%</td><td></td><td class="g-price">2k</td><td class="g-price">13k</td></tr>
+  <tr><td>Iridium</td><td class="g-best">29.8%</td><td class="g-mid">19.8%</td><td class="rk-l"></td><td></td><td class="rk-r"></td><td></td><td></td><td class="g-price">181k</td><td class="g-price">921k</td></tr>
+  <tr><td>Lithium</td><td class="g-high">37.7%</td><td class="g-best">45.3%</td><td class="rk-l"></td><td></td><td class="rk-r"></td><td></td><td></td><td class="g-price">2k</td><td class="g-price">3k</td></tr>
+  <tr><td>Osmium</td><td class="g-high">33.3%</td><td class="g-best">40.1%</td><td class="rk-l"></td><td></td><td class="rk-r"></td><td></td><td></td><td class="g-price">47k</td><td class="g-price">273k</td></tr>
+  <tr><td>Platinum</td><td class="g-best">46.5%</td><td class="g-high">38.5%</td><td class="rk-l"></td><td></td><td class="rk-r"></td><td></td><td></td><td class="g-price">58k</td><td class="g-price">303k</td></tr>
+  <tr><td>Rhodplumsite</td><td class="g-best">10.5%</td><td class="g-low">3.2%</td><td class="rk-l"></td><td></td><td class="rk-r"></td><td></td><td></td><td class="g-price">178k</td><td class="g-price">827k</td></tr>
+  <tr><td>Silver</td><td class="g-best">28.9%</td><td class="g-high">25.9%</td><td class="g-high rk-l">28.0%</td><td class="g-high">27.6%</td><td class="g-high rk-r">28.7%</td><td></td><td></td><td class="g-price">34k</td><td class="g-price">49k</td></tr>
+  <tr><td>Tantalum</td><td class="g-high">33.3%</td><td class="g-best">34.8%</td><td class="rk-l"></td><td></td><td class="rk-r"></td><td></td><td></td><td class="g-price">15k</td><td class="g-price">16k</td></tr>
+  <tr><td>Titanium</td><td class="g-high">44.7%</td><td class="g-best">52.6%</td><td class="rk-l"></td><td></td><td class="rk-r"></td><td></td><td></td><td class="g-price">5k</td><td class="g-price">6k</td></tr>
+  <tr><td>Uranium</td><td class="g-high">22.8%</td><td class="g-best">38.9%</td><td class="rk-l"></td><td></td><td class="rk-r"></td><td></td><td></td><td class="g-price">8k</td><td class="g-price">9k</td></tr>
+  <tr><td>Alexandrite</td><td></td><td></td><td class="g-low rk-l">2.4%</td><td class="g-best">34.5%</td><td class="g-low rk-r">6.7%</td><td></td><td></td><td class="g-price">209k</td><td class="g-price">894k</td></tr>
+  <tr><td>Bastnasite</td><td></td><td></td><td class="g-mid rk-l">9.1%</td><td class="g-best">43.1%</td><td class="g-low rk-r">7.9%</td><td></td><td></td><td class="g-price">68k</td><td class="g-price">258k</td></tr>
+  <tr><td>Grandidierite</td><td></td><td></td><td class="g-mid rk-l">12.2%</td><td class="g-low">6.9%</td><td class="g-best rk-r">12.8%</td><td></td><td></td><td class="g-price">190k</td><td class="g-price">916k</td></tr>
+  <tr><td>Helium</td><td class="g-low">5.3%</td><td class="g-low">6.1%</td><td class="g-mid rk-l">9.1%</td><td class="g-low">5.2%</td><td class="g-best rk-r">51.8%</td><td></td><td></td><td class="g-price">86k</td><td class="g-price">454k</td></tr>
+  <tr><td>Jadeite</td><td></td><td></td><td class="g-high rk-l">22.0%</td><td class="g-mid">10.3%</td><td class="g-best rk-r">55.5%</td><td></td><td></td><td class="g-price">29k</td><td class="g-price">215k</td></tr>
+  <tr><td>Magnesite</td><td></td><td></td><td class="g-best rk-l">43.3%</td><td class="g-high">22.4%</td><td class="g-high rk-r">30.5%</td><td></td><td></td><td class="g-price">33k</td><td class="g-price">119k</td></tr>
+  <tr><td>Monazite</td><td></td><td></td><td class="g-low rk-l">2.4%</td><td class="g-best">44.8%</td><td class="g-low rk-r">7.9%</td><td></td><td></td><td class="g-price">208k</td><td class="g-price">896k</td></tr>
+  <tr><td>Olivine</td><td></td><td></td><td class="g-low rk-l">5.5%</td><td class="g-best">55.2%</td><td class="g-mid rk-r">11.0%</td><td class="g-mid">14.3%</td><td></td><td class="g-price">27k</td><td class="g-price">98k</td></tr>
+  <tr><td>Palladium</td><td class="g-low">5.3%</td><td class="g-mid">10.5%</td><td class="g-high rk-l">31.1%</td><td class="g-mid">10.3%</td><td class="g-high rk-r">23.2%</td><td class="g-best">35.7%</td><td></td><td class="g-price">54k</td><td class="g-price">71k</td></tr>
+  <tr><td>Periclase Dunite</td><td></td><td></td><td class="g-best rk-l">11.0%</td><td class="g-low">1.7%</td><td class="g-low rk-r">4.9%</td><td></td><td></td><td class="g-price">161k</td><td class="g-price">656k</td></tr>
+  <tr><td>Quartz Pyroxenite</td><td></td><td></td><td class="rk-l"></td><td class="g-best">17.2%</td><td class="g-low rk-r">3.7%</td><td></td><td></td><td class="g-price">40k</td><td class="g-price">148k</td></tr>
+  <tr><td>Samarium</td><td class="g-high">36.8%</td><td class="g-high">28.3%</td><td class="g-best rk-l">42.7%</td><td class="g-high">29.3%</td><td class="g-high rk-r">32.3%</td><td></td><td></td><td class="g-price">26k</td><td class="g-price">49k</td></tr>
+  <tr><td>Serendibite</td><td></td><td></td><td class="g-low rk-l">2.4%</td><td class="g-best">32.8%</td><td class="g-low rk-r">4.9%</td><td></td><td></td><td class="g-price">167k</td><td class="g-price">689k</td></tr>
+  <tr><td>Thorium</td><td class="g-high">39.5%</td><td class="g-high">34.0%</td><td class="g-best rk-l">47.6%</td><td class="g-high">22.4%</td><td class="g-high rk-r">31.7%</td><td></td><td></td><td class="g-price">12k</td><td class="g-price">13k</td></tr>
+  <tr><td>Thortveitite</td><td></td><td></td><td class="g-best rk-l">12.2%</td><td class="g-low">5.2%</td><td class="g-mid rk-r">9.8%</td><td></td><td></td><td class="g-price">161k</td><td class="g-price">620k</td></tr>
+  <tr><td>Uraninite</td><td></td><td></td><td class="g-best rk-l">49.4%</td><td class="g-high">22.4%</td><td class="g-high rk-r">40.9%</td><td></td><td></td><td class="g-price">2k</td><td class="g-price">5k</td></tr>
+  <tr><td>Deuterium</td><td></td><td></td><td class="g-low rk-l">6.7%</td><td></td><td class="g-low rk-r">2.4%</td><td class="g-high">35.7%</td><td class="g-best">53.4%</td><td class="g-price">35k</td><td class="g-price">128k</td></tr>
+  <tr><td>Helium-3</td><td></td><td></td><td class="rk-l"></td><td></td><td class="rk-r"></td><td></td><td class="g-best">18.3%</td><td class="g-price">81k</td><td class="g-price">424k</td></tr>
+  <tr><td>Low Temp Diamonds</td><td></td><td></td><td class="g-low rk-l">3.7%</td><td class="g-low">3.4%</td><td class="g-low rk-r">5.5%</td><td class="g-low">7.1%</td><td class="g-best">26.0%</td><td class="g-price">112k</td><td class="g-price">533k</td></tr>
+  <tr><td>Methanol Monohydrate Crystals</td><td></td><td></td><td class="rk-l"></td><td></td><td class="rk-r"></td><td class="g-best">78.6%</td><td class="g-high">67.2%</td><td class="g-price">2k</td><td class="g-price">4k</td></tr>
+  <tr><td>Tritium</td><td></td><td></td><td class="rk-l"></td><td></td><td class="rk-r"></td><td></td><td class="g-best">32.8%</td><td class="g-price">53k</td><td class="g-price">62k</td></tr>
+  <tr><td>Water</td><td></td><td></td><td class="rk-l"></td><td></td><td class="rk-r"></td><td class="g-high">78.6%</td><td class="g-best">99.2%</td><td class="g-price">1k</td><td class="g-price">5k</td></tr>
 </tbody>
 </table>
 
 <h2 id="body-types">What the columns mean</h2>
 <ul>
-  <li><strong>Metal-Rich</strong> and <strong>High Metal</strong> - the game's own body classes,
-  as the system map names them.</li>
-  <li><strong>Volcanic Magma</strong> - a rocky body with metallic or rocky volcanism.</li>
-  <li><strong>Volcanic Silicate</strong> - a rocky body with silicate volcanism. Magma and
-  silicate carry opposite materials, which is why they are not one column: monazite reads 45.6%
-  on magma and 7.9% on silicate, jadeite 10.5% and 55.5%.</li>
-  <li><strong>Rocky</strong> - a rocky body with no volcanism.</li>
-  <li><strong>Rocky Ice</strong> and <strong>Icy</strong> - the icy classes. Both rest on few
-  locations, so read them as a hint.</li>
-  <li><strong>Median</strong> and <strong>Max</strong> - sell price per tonne across the markets
+  <li>Every column is the game's body class as the system map names it. Only a Rocky body
+  splits again on its volcanism: magma on a Metal-Rich or High Metal body counts under that
+  body's column, not under rock 80%+ [magma]. The magma material rules ask rock &ge; 80%: every
+  Rocky body read clears it, no metal body does.</li>
+  <li><strong>metal-rich</strong> - Metal-rich body, with or without volcanism, rock 0% on the bodies read.</li>
+  <li><strong>high-metal-content</strong> - High metal content body, with or without volcanism, rock 60-68% on the bodies read.</li>
+  <li><strong>rock 80%+ [none]</strong> - Rocky body, no volcanism, rock 90-91% on the bodies read.</li>
+  <li><strong>rock 80%+ [magma]</strong> - Rocky body with metallic or rocky magma, rock 91% on the bodies read.</li>
+  <li><strong>rock 80%+ [silicate geysers]</strong> - Rocky body with silicate vapour geysers, rock 86-97% on the bodies read.</li>
+  <li><strong>rocky-ice</strong> - Rocky ice body, rock 52% on the bodies read.</li>
+  <li><strong>icy</strong> - Icy body, rock 12-18% on the bodies read.</li>
+  <li>Magma and silicate geysers carry opposite materials, which is why they are not one
+  column - compare monazite and jadeite across the two.</li>
+  <li><strong>Median/t</strong> and <strong>Best/t</strong> - sell price per tonne across the markets
   we hold prices for. Ega, fleet carriers, on-foot settlements and rows reading demand 999999 are
   left out, the last being a placeholder rather than a market.</li>
 </ul>
 
 <hr>
 <p style="font-size:0.8em; color:var(--text-dim);">
-Generated from EDIntel, 2026-09-12 15:22 UTC.
+Generated from EDIntel, 2026-09-14 14:30 UTC.
 </p>
 
 </main>
