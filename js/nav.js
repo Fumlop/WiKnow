@@ -26,6 +26,7 @@
       items: [
         { href: '/bgs/influence.html', label: 'Influence' },
         { href: '/bgs/economy-boost.html', label: 'Economy Boost' },
+        { href: '/bgs/economy-boost-prices.html', label: 'Economy Boost Prices' },
         { href: '/bgs/conflicts.html', label: 'Wars & Elections' },
         { href: '/bgs/expansion-retreat.html', label: 'Expansion & Retreat' },
         { href: '/bgs/states.html', label: 'States Reference' },

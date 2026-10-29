@@ -15,6 +15,7 @@ Public static wiki for Elite Dangerous guides (Winters PowerPlay & BGS). Pure HT
     index.html            BGS hub page
     influence.html        How influence works
     economy-boost.html    Trade & commodity delivery guide
+    economy-boost-prices.html  Mining prices per faction state (generated from EDIntel)
     conflicts.html        Wars & elections
     expansion-retreat.html Expansion, retreat, colonization
     states.html           All BGS states reference
